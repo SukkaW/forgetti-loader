@@ -5,9 +5,10 @@
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
+    "jsx": "preserve",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*", "rollup.config.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "test/**/*.ts", "test/**/*.tsx", "rollup.config.ts"]
 }
