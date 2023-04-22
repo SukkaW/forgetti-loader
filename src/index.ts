@@ -8,6 +8,8 @@ export interface ForgettiLoaderOptions extends ForgettiOptions {
   babel?: babel.TransformOptions
 }
 
+export const defineForgettiLoaderOptions = (options: ForgettiLoaderOptions) => options;
+
 const defaultBabelParsePlugins: NonNullable<NonNullable<babel.TransformOptions['parserOpts']>['plugins']> = ['jsx', 'typescript'];
 
 export default async function forgettiLoader(this: webpack.LoaderContext<ForgettiLoaderOptions>, input: string, _inputSourceMap: any) {

@@ -1,6 +1,8 @@
 import chai from 'chai';
 import { jestSnapshotPlugin } from 'mocha-chai-jest-snapshot';
 
+import { defineForgettiLoaderOptions } from '../src';
+
 import getCompiler from './utils/get-compiler';
 import compile from './utils/compile';
 import getModuleSource from './utils/get-module-source';
@@ -9,6 +11,13 @@ chai.should();
 chai.use(jestSnapshotPlugin());
 
 describe('forgetti-loader', () => {
+  it('defineForgettiLoaderOptions', () => {
+    const opt = { preset: 'react', babel: {} };
+    const definedOpt = defineForgettiLoaderOptions({ preset: 'react', babel: {} });
+
+    definedOpt.should.eql(opt);
+  });
+
   it('should work', async () => {
     const compiler = getCompiler('./simple.jsx');
     const stats = await compile(compiler);
