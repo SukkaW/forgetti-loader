@@ -12,10 +12,13 @@ Forgetti is an auto-memoization Babel plugin made by Alexis H. Munsayac. It was 
 
 ```bash
 # npm
+npm i forgetti
 npm i -D forgetti-loader
 # yarn
+yarn add forgetti
 yarn add -D forgetti-loader
 # pnpm
+pnpm add forgetti
 pnpm add -D forgetti-loader
 ```
 
