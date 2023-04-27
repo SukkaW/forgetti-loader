@@ -21,7 +21,8 @@
     "build": "rollup -c rollup.config.ts --configPlugin swc3 --bundleConfigAsCjs",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build",
-    "test": "mocha -r @swc-node/register 'test/index.ts'"
+    "test": "mocha -r @swc-node/register 'test/index.ts'",
+    "test:update": "mocha --update -r @swc-node/register 'test/index.ts'"
   },
   "repository": {
     "type": "git",
