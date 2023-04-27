@@ -9,46 +9,43 @@ import { $$equals as _$$equals } from \\"forgetti/runtime\\";
 import { useState } from 'preact/hooks';
 import { memo } from 'preact/compat';
 function Sukka() {
-    var _c, _ref, _c1, _ref1;
-    let _c2 = _$$cache(_useMemo, 22);
+    let _c = _$$cache(_useMemo, 22);
     const [count, setCount] = useState(0);
-    let _v = (_c = _c2)[_ref = 0] || (_c[_ref] = {
+    let _v = _c[0] ||= {
         current: null
-    });
+    };
     const singletonRef = _v;
-    let _eq = _$$equals(_c2[1], singletonRef), _v2 = _eq ? _c2[1] : _c2[1] = singletonRef, _v3 = _eq ? _c2[2] : _c2[2] = _v2.current, _eq2 = _$$equals(_c2[3], _v3), _v4 = _eq2 ? _c2[3] : _c2[3] = _v3;
+    let _eq = _$$equals(_c[1], singletonRef), _v2 = _eq ? _c[1] : _c[1] = singletonRef, _v3 = _eq ? _c[2] : _c[2] = _v2.current, _eq2 = _$$equals(_c[3], _v3), _v4 = _eq2 ? _c[3] : _c[3] = _v3;
     if (!_v4) {
-        var _c3, _ref2, _c21, _ref3;
-        let _c22 = (_c3 = _c2)[_ref2 = 4] || (_c3[_ref2] = new Array(1)), _v5 = (_c21 = _c22)[_ref3 = 0] || (_c21[_ref3] = new AbortController()), _v6 = _v2.current = _v5;
+        let _c2 = _c[4] ||= new Array(1), _v5 = _c2[0] ||= new AbortController(), _v6 = _v2.current = _v5;
         _v6;
     }
-    let _v7 = (_c1 = _c2)[_ref1 = 5] || (_c1[_ref1] = []), _eq3 = _$$equals(_c2[6], ()=>setCount((count)=>count + 1)), _v8 = _eq3 ? _c2[6] : _c2[6] = ()=>setCount((count)=>count + 1);
+    let _v7 = _c[5] ||= [], _v8 = _c[6] ||= ()=>setCount((count)=>count + 1);
     const handleButtonClick = _v8;
-    let _eq4 = _$$equals(_c2[7], count), _v9 = _eq4 ? _c2[7] : _c2[7] = count;
+    let _eq3 = _$$equals(_c[7], count), _v9 = _eq3 ? _c[7] : _c[7] = count;
     if (_v9 > 10) {
         return null;
     }
-    let _v10 = _eq4 ? _c2[8] : _c2[8] = /*#__PURE__*/ _jsxs(\\"p\\", {
+    let _v10 = _eq3 ? _c[8] : _c[8] = /*#__PURE__*/ _jsxs(\\"p\\", {
         children: [
             \\"Count: \\",
             _v9
         ]
-    }), _eq5 = _$$equals(_c2[9], _v10), _v11 = _eq5 ? _c2[9] : _c2[9] = _v10, _eq6 = _$$equals(_c2[10], handleButtonClick), _v12 = _eq6 ? _c2[10] : _c2[10] = handleButtonClick, _v13 = _eq6 ? _c2[11] : _c2[11] = /*#__PURE__*/ _jsx(\\"button\\", {
+    }), _eq4 = _$$equals(_c[9], _v10), _v11 = _eq4 ? _c[9] : _c[9] = _v10, _eq5 = _$$equals(_c[10], handleButtonClick), _v12 = _eq5 ? _c[10] : _c[10] = handleButtonClick, _v13 = _eq5 ? _c[11] : _c[11] = /*#__PURE__*/ _jsx(\\"button\\", {
         onClick: _v12,
         children: \\"Increment\\"
-    }), _eq7 = _$$equals(_c2[12], _v13), _v14 = _eq7 ? _c2[12] : _c2[12] = _v13, _v15;
+    }), _eq6 = _$$equals(_c[12], _v13), _v14 = _eq6 ? _c[12] : _c[12] = _v13, _v15;
     if (_v9 > 10) {
-        var _c4, _ref4, _c31, _ref5;
-        let _c3 = (_c4 = _c2)[_ref4 = 13] || (_c4[_ref4] = new Array(1)), _v16 = (_c31 = _c3)[_ref5 = 0] || (_c31[_ref5] = /*#__PURE__*/ _jsx(\\"p\\", {
+        let _c3 = _c[13] ||= new Array(1), _v16 = _c3[0] ||= /*#__PURE__*/ _jsx(\\"p\\", {
             children: \\"Count is higher than 10\\"
-        }));
+        });
         _v15 = _v16;
     } else _v15 = _v9 > 10;
-    let _eq8 = _$$equals(_c2[14], _v15), _v17 = _eq8 ? _c2[14] : _c2[14] = _v15, _eq9 = _$$equals(_c2[15], _v9 > 0), _v18 = _eq9 ? _c2[15] : _c2[15] = _v9 > 0, _eq10 = _$$equals(_c2[16], setCount), _v19 = _eq10 ? _c2[16] : _c2[16] = setCount, _v20 = _eq10 ? _c2[17] : _c2[17] = ()=>setCount(0), _eq11 = _$$equals(_c2[18], _v20), _v21 = _eq11 ? _c2[18] : _c2[18] = _v20, _eq12 = _eq9 && _eq11, _v22 = _eq12 ? _c2[19] : _c2[19] = /*#__PURE__*/ _jsx(\\"button\\", {
+    let _eq7 = _$$equals(_c[14], _v15), _v17 = _eq7 ? _c[14] : _c[14] = _v15, _eq8 = _$$equals(_c[15], _v9 > 0), _v18 = _eq8 ? _c[15] : _c[15] = _v9 > 0, _eq9 = _$$equals(_c[16], setCount), _v19 = _eq9 ? _c[16] : _c[16] = setCount, _v20 = _eq9 ? _c[17] : _c[17] = ()=>setCount(0), _eq10 = _$$equals(_c[18], _v20), _v21 = _eq10 ? _c[18] : _c[18] = _v20, _eq11 = _eq8 && _eq10, _v22 = _eq11 ? _c[19] : _c[19] = /*#__PURE__*/ _jsx(\\"button\\", {
         disabled: _v18,
         onClick: _v21,
         children: \\"Reset Count\\"
-    }), _eq13 = _$$equals(_c2[20], _v22), _v23 = _eq13 ? _c2[20] : _c2[20] = _v22, _eq14 = _eq5 && _eq7 && _eq8 && _eq13, _v24 = _eq14 ? _c2[21] : _c2[21] = /*#__PURE__*/ _jsxs(\\"div\\", {
+    }), _eq12 = _$$equals(_c[20], _v22), _v23 = _eq12 ? _c[20] : _c[20] = _v22, _eq13 = _eq4 && _eq6 && _eq7 && _eq12, _v24 = _eq13 ? _c[21] : _c[21] = /*#__PURE__*/ _jsxs(\\"div\\", {
         children: [
             _v11,
             _v14,
@@ -69,46 +66,43 @@ import { $$cache as _$$cache } from \\"forgetti/runtime\\";
 import { $$equals as _$$equals } from \\"forgetti/runtime\\";
 import { useState } from 'react';
 export default function Sukka() {
-    var _c, _ref, _c1, _ref1;
-    let _c2 = _$$cache(_useMemo, 22);
+    let _c = _$$cache(_useMemo, 22);
     const [count, setCount] = useState(0);
-    let _v = (_c = _c2)[_ref = 0] || (_c[_ref] = {
+    let _v = _c[0] ||= {
         current: null
-    });
+    };
     const singletonRef = _v;
-    let _eq = _$$equals(_c2[1], singletonRef), _v2 = _eq ? _c2[1] : _c2[1] = singletonRef, _v3 = _eq ? _c2[2] : _c2[2] = _v2.current, _eq2 = _$$equals(_c2[3], _v3), _v4 = _eq2 ? _c2[3] : _c2[3] = _v3;
+    let _eq = _$$equals(_c[1], singletonRef), _v2 = _eq ? _c[1] : _c[1] = singletonRef, _v3 = _eq ? _c[2] : _c[2] = _v2.current, _eq2 = _$$equals(_c[3], _v3), _v4 = _eq2 ? _c[3] : _c[3] = _v3;
     if (!_v4) {
-        var _c3, _ref2, _c21, _ref3;
-        let _c22 = (_c3 = _c2)[_ref2 = 4] || (_c3[_ref2] = new Array(1)), _v5 = (_c21 = _c22)[_ref3 = 0] || (_c21[_ref3] = new AbortController()), _v6 = _v2.current = _v5;
+        let _c2 = _c[4] ||= new Array(1), _v5 = _c2[0] ||= new AbortController(), _v6 = _v2.current = _v5;
         _v6;
     }
-    let _v7 = (_c1 = _c2)[_ref1 = 5] || (_c1[_ref1] = []), _eq3 = _$$equals(_c2[6], ()=>setCount((count)=>count + 1)), _v8 = _eq3 ? _c2[6] : _c2[6] = ()=>setCount((count)=>count + 1);
+    let _v7 = _c[5] ||= [], _v8 = _c[6] ||= ()=>setCount((count)=>count + 1);
     const handleButtonClick = _v8;
-    let _eq4 = _$$equals(_c2[7], count), _v9 = _eq4 ? _c2[7] : _c2[7] = count;
+    let _eq3 = _$$equals(_c[7], count), _v9 = _eq3 ? _c[7] : _c[7] = count;
     if (_v9 > 10) {
         return null;
     }
-    let _v10 = _eq4 ? _c2[8] : _c2[8] = /*#__PURE__*/ _jsxs(\\"p\\", {
+    let _v10 = _eq3 ? _c[8] : _c[8] = /*#__PURE__*/ _jsxs(\\"p\\", {
         children: [
             \\"Count: \\",
             _v9
         ]
-    }), _eq5 = _$$equals(_c2[9], _v10), _v11 = _eq5 ? _c2[9] : _c2[9] = _v10, _eq6 = _$$equals(_c2[10], handleButtonClick), _v12 = _eq6 ? _c2[10] : _c2[10] = handleButtonClick, _v13 = _eq6 ? _c2[11] : _c2[11] = /*#__PURE__*/ _jsx(\\"button\\", {
+    }), _eq4 = _$$equals(_c[9], _v10), _v11 = _eq4 ? _c[9] : _c[9] = _v10, _eq5 = _$$equals(_c[10], handleButtonClick), _v12 = _eq5 ? _c[10] : _c[10] = handleButtonClick, _v13 = _eq5 ? _c[11] : _c[11] = /*#__PURE__*/ _jsx(\\"button\\", {
         onClick: _v12,
         children: \\"Increment\\"
-    }), _eq7 = _$$equals(_c2[12], _v13), _v14 = _eq7 ? _c2[12] : _c2[12] = _v13, _v15;
+    }), _eq6 = _$$equals(_c[12], _v13), _v14 = _eq6 ? _c[12] : _c[12] = _v13, _v15;
     if (_v9 > 10) {
-        var _c4, _ref4, _c31, _ref5;
-        let _c3 = (_c4 = _c2)[_ref4 = 13] || (_c4[_ref4] = new Array(1)), _v16 = (_c31 = _c3)[_ref5 = 0] || (_c31[_ref5] = /*#__PURE__*/ _jsx(\\"p\\", {
+        let _c3 = _c[13] ||= new Array(1), _v16 = _c3[0] ||= /*#__PURE__*/ _jsx(\\"p\\", {
             children: \\"Count is higher than 10\\"
-        }));
+        });
         _v15 = _v16;
     } else _v15 = _v9 > 10;
-    let _eq8 = _$$equals(_c2[14], _v15), _v17 = _eq8 ? _c2[14] : _c2[14] = _v15, _eq9 = _$$equals(_c2[15], _v9 > 0), _v18 = _eq9 ? _c2[15] : _c2[15] = _v9 > 0, _eq10 = _$$equals(_c2[16], setCount), _v19 = _eq10 ? _c2[16] : _c2[16] = setCount, _v20 = _eq10 ? _c2[17] : _c2[17] = ()=>setCount(0), _eq11 = _$$equals(_c2[18], _v20), _v21 = _eq11 ? _c2[18] : _c2[18] = _v20, _eq12 = _eq9 && _eq11, _v22 = _eq12 ? _c2[19] : _c2[19] = /*#__PURE__*/ _jsx(\\"button\\", {
+    let _eq7 = _$$equals(_c[14], _v15), _v17 = _eq7 ? _c[14] : _c[14] = _v15, _eq8 = _$$equals(_c[15], _v9 > 0), _v18 = _eq8 ? _c[15] : _c[15] = _v9 > 0, _eq9 = _$$equals(_c[16], setCount), _v19 = _eq9 ? _c[16] : _c[16] = setCount, _v20 = _eq9 ? _c[17] : _c[17] = ()=>setCount(0), _eq10 = _$$equals(_c[18], _v20), _v21 = _eq10 ? _c[18] : _c[18] = _v20, _eq11 = _eq8 && _eq10, _v22 = _eq11 ? _c[19] : _c[19] = /*#__PURE__*/ _jsx(\\"button\\", {
         disabled: _v18,
         onClick: _v21,
         children: \\"Reset Count\\"
-    }), _eq13 = _$$equals(_c2[20], _v22), _v23 = _eq13 ? _c2[20] : _c2[20] = _v22, _eq14 = _eq5 && _eq7 && _eq8 && _eq13, _v24 = _eq14 ? _c2[21] : _c2[21] = /*#__PURE__*/ _jsxs(\\"div\\", {
+    }), _eq12 = _$$equals(_c[20], _v22), _v23 = _eq12 ? _c[20] : _c[20] = _v22, _eq13 = _eq4 && _eq6 && _eq7 && _eq12, _v24 = _eq13 ? _c[21] : _c[21] = /*#__PURE__*/ _jsxs(\\"div\\", {
         children: [
             _v11,
             _v14,
@@ -127,17 +121,16 @@ import { useMemo as _useMemo } from \\"react\\";
 import { $$cache as _$$cache } from \\"forgetti/runtime\\";
 import { $$equals as _$$equals } from \\"forgetti/runtime\\";
 export default function Example() {
-    var _c, _ref, _c1, _ref1;
-    let _c2 = _$$cache(_useMemo, 6), _v = (_c = _c2)[_ref = 0] || (_c[_ref] = [
+    let _c = _$$cache(_useMemo, 6), _v = _c[0] ||= [
         1,
         2,
         3,
         4
-    ]);
+    ];
     const value = _v;
-    let _eq = _$$equals(_c2[1], value), _v2 = _eq ? _c2[1] : _c2[1] = value, _v3 = (_c1 = _c2)[_ref1 = 2] || (_c1[_ref1] = (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
+    let _eq = _$$equals(_c[1], value), _v2 = _eq ? _c[1] : _c[1] = value, _v3 = _c[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
             children: i
-        }, i)), _v4 = _eq ? _c2[3] : _c2[3] = _v2.map(_v3), _eq2 = _$$equals(_c2[4], _v4), _v5 = _eq2 ? _c2[4] : _c2[4] = _v4, _v6 = _eq2 ? _c2[5] : _c2[5] = /*#__PURE__*/ _jsx(\\"div\\", {
+        }, i), _v4 = _eq ? _c[3] : _c[3] = _v2.map(_v3), _eq2 = _$$equals(_c[4], _v4), _v5 = _eq2 ? _c[4] : _c[4] = _v4, _v6 = _eq2 ? _c[5] : _c[5] = /*#__PURE__*/ _jsx(\\"div\\", {
         children: _v5
     });
     return _v6;
@@ -151,17 +144,16 @@ import { useMemo as _useMemo } from \\"react\\";
 import { $$cache as _$$cache } from \\"forgetti/runtime\\";
 import { $$equals as _$$equals } from \\"forgetti/runtime\\";
 export default function Example() {
-    var _c, _ref, _c1, _ref1;
-    let _c2 = _$$cache(_useMemo, 6), _v = (_c = _c2)[_ref = 0] || (_c[_ref] = [
+    let _c = _$$cache(_useMemo, 6), _v = _c[0] ||= [
         1,
         2,
         3,
         4
-    ]);
+    ];
     const value = _v;
-    let _eq = _$$equals(_c2[1], value), _v2 = _eq ? _c2[1] : _c2[1] = value, _v3 = (_c1 = _c2)[_ref1 = 2] || (_c1[_ref1] = (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
+    let _eq = _$$equals(_c[1], value), _v2 = _eq ? _c[1] : _c[1] = value, _v3 = _c[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
             children: i
-        }, i)), _v4 = _eq ? _c2[3] : _c2[3] = _v2.map(_v3), _eq2 = _$$equals(_c2[4], _v4), _v5 = _eq2 ? _c2[4] : _c2[4] = _v4, _v6 = _eq2 ? _c2[5] : _c2[5] = /*#__PURE__*/ _jsx(\\"div\\", {
+        }, i), _v4 = _eq ? _c[3] : _c[3] = _v2.map(_v3), _eq2 = _$$equals(_c[4], _v4), _v5 = _eq2 ? _c[4] : _c[4] = _v4, _v6 = _eq2 ? _c[5] : _c[5] = /*#__PURE__*/ _jsx(\\"div\\", {
         children: _v5
     });
     return _v6;

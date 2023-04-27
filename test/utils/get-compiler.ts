@@ -26,7 +26,7 @@ const useSwcLoader = (isTSX: boolean) => ({
             : { jsx: true }
         )
       },
-      target: 'es2018',
+      target: 'esnext',
       transform: {
         react: {
           runtime: 'automatic',
