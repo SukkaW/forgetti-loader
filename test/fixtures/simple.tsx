@@ -7,3 +7,13 @@ export default function Example() {
     </div>
   );
 }
+
+export const AnotherExmaple = () => {
+  const value = [1, 2, 3, 4] as const;
+
+  return (
+    <div>
+      {value.map(i => <p key={i}>{i}</p>)}
+    </div>
+  );
+};
