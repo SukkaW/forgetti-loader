@@ -1,6 +1,6 @@
 {
   "name": "forgetti-loader",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A webpack loader that solves your hook spaghetti. Inspired by React Forget. Powered by forgetti.",
   "files": [
     "dist"
@@ -72,7 +72,7 @@
     "webpack": "^5.80.0"
   },
   "peerDependencies": {
-    "forgetti": "0.4.4"
+    "forgetti": "0.4.5"
   },
   "engines": {
     "node": ">=16"
