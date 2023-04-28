@@ -158,5 +158,20 @@ export default function Example() {
     });
     return _v6;
 }
+export const AnotherExmaple = ()=>{
+    let _c2 = _$$cache(_useMemo, 6), _v7 = _c2[0] ||= [
+        1,
+        2,
+        3,
+        4
+    ];
+    const value = _v7;
+    let _eq3 = _$$equals(_c2[1], value), _v8 = _eq3 ? _c2[1] : _c2[1] = value, _v9 = _c2[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
+            children: i
+        }, i), _v10 = _eq3 ? _c2[3] : _c2[3] = _v8.map(_v9), _eq4 = _$$equals(_c2[4], _v10), _v11 = _eq4 ? _c2[4] : _c2[4] = _v10, _v12 = _eq4 ? _c2[5] : _c2[5] = /*#__PURE__*/ _jsx(\\"div\\", {
+        children: _v11
+    });
+    return _v12;
+};
 "
 `;
