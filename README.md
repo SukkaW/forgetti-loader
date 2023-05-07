@@ -1,10 +1,10 @@
 # forgetti-loader
 
-A Webpack loader and a Next.js plugin that solves your hook spaghetti. Inspired by React Forget. Powered by Alexis H. Munsayac's [Forgetti](https://github.com/lxsmnsyc/forgetti).
+A webpack loader and a Next.js plugin that brings an auto-memoization compiler to solve your hook spaghetti. Powered by [Forgetti](https://github.com/lxsmnsyc/forgetti) which is inspired by React Forget.
 
 ## What is Forgetti?
 
-Forgetti is an auto-memoization Babel plugin made by Alexis H. Munsayac. It was inspired by React Forget and can be used for optimizing a hook-based flow like React hooks.
+[Forgetti](https://github.com/lxsmnsyc/forgetti) is an auto-memoization Babel plugin made by [Alexis H. Munsayac](https://github.com/lxsmnsyc). It was inspired by React Forget and can be used for optimizing a hook-based flow like React hooks.
 
 [![React without memo](https://img.youtube.com/vi/lGEMwh32soc/0.jpg)](https://youtu.be/lGEMwh32soc "React without memo")
 
