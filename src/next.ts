@@ -27,7 +27,7 @@ export default function forgettiNextPlugin(pluginOptions: ForgettiLoaderOptions 
               options: pluginOptions
             }
           ]
-        });
+        } as RuleSetRule);
 
         return config;
       }
