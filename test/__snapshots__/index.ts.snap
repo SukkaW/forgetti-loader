@@ -9,51 +9,51 @@ import { $$equals as _$$equals } from \\"forgetti/runtime\\";
 import { useState } from 'preact/hooks';
 import { memo } from 'preact/compat';
 function Sukka() {
-    let _c = _$$cache(_useMemo, 22);
+    let _c = _$$cache(_useMemo, 26);
     const [count, setCount] = useState(0);
     let _v = _c[0] ||= {
         current: null
     };
     const singletonRef = _v;
-    let _eq = _$$equals(_c[1], singletonRef), _v2 = _eq ? _c[1] : _c[1] = singletonRef, _v3 = _eq ? _c[2] : _c[2] = _v2.current, _eq2 = _$$equals(_c[3], _v3), _v4 = _eq2 ? _c[3] : _c[3] = _v3;
-    if (!_v4) {
-        let _c2 = _c[4] ||= new Array(1), _v5 = _c2[0] ||= new AbortController(), _v6 = _v2.current = _v5;
-        _v6;
+    let _eq = _$$equals(_c, 1, singletonRef), _v2 = _eq ? _c[1] : _c[1] = singletonRef, _v3 = _eq ? _c[2] : _c[2] = _v2.current, _eq2 = _$$equals(_c, 3, _v3), _v4 = _eq2 ? _c[3] : _c[3] = _v3, _v5 = _eq2 ? _c[4] : _c[4] = !_v4;
+    if (_v5) {
+        let _c2 = _c[5] ||= new Array(1), _v6 = _c2[0] ||= new AbortController(), _v7 = _v2.current = _v6;
+        _v7;
     }
-    let _v7 = _c[5] ||= [], _v8 = _c[6] ||= ()=>setCount((count)=>count + 1);
-    const handleButtonClick = _v8;
-    let _eq3 = _$$equals(_c[7], count), _v9 = _eq3 ? _c[7] : _c[7] = count;
-    if (_v9 > 10) {
+    let _v8 = _c[6] ||= [], _v9 = _c[7] ||= ()=>setCount((count)=>count + 1);
+    const handleButtonClick = _v9;
+    let _eq3 = _$$equals(_c, 8, count), _v10 = _eq3 ? _c[8] : _c[8] = count, _v11 = _eq3 ? _c[9] : _c[9] = _v10 > 10;
+    if (_v11) {
         return null;
     }
-    let _v10 = _eq3 ? _c[8] : _c[8] = /*#__PURE__*/ _jsxs(\\"p\\", {
+    let _v12 = _eq3 ? _c[10] : _c[10] = /*#__PURE__*/ _jsxs(\\"p\\", {
         children: [
             \\"Count: \\",
-            _v9
+            _v10
         ]
-    }), _eq4 = _$$equals(_c[9], _v10), _v11 = _eq4 ? _c[9] : _c[9] = _v10, _eq5 = _$$equals(_c[10], handleButtonClick), _v12 = _eq5 ? _c[10] : _c[10] = handleButtonClick, _v13 = _eq5 ? _c[11] : _c[11] = /*#__PURE__*/ _jsx(\\"button\\", {
-        onClick: _v12,
+    }), _eq4 = _$$equals(_c, 11, _v12), _v13 = _eq4 ? _c[11] : _c[11] = _v12, _eq5 = _$$equals(_c, 12, handleButtonClick), _v14 = _eq5 ? _c[12] : _c[12] = handleButtonClick, _v15 = _eq5 ? _c[13] : _c[13] = /*#__PURE__*/ _jsx(\\"button\\", {
+        onClick: _v14,
         children: \\"Increment\\"
-    }), _eq6 = _$$equals(_c[12], _v13), _v14 = _eq6 ? _c[12] : _c[12] = _v13, _v15;
-    if (_v9 > 10) {
-        let _c3 = _c[13] ||= new Array(1), _v16 = _c3[0] ||= /*#__PURE__*/ _jsx(\\"p\\", {
+    }), _eq6 = _$$equals(_c, 14, _v15), _v16 = _eq6 ? _c[14] : _c[14] = _v15, _v18 = _eq3 ? _c[15] : _c[15] = _v10 > 10, _v17;
+    if (_v18) {
+        let _c3 = _c[16] ||= new Array(1), _v19 = _c3[0] ||= /*#__PURE__*/ _jsx(\\"p\\", {
             children: \\"Count is higher than 10\\"
         });
-        _v15 = _v16;
-    } else _v15 = _v9 > 10;
-    let _eq7 = _$$equals(_c[14], _v15), _v17 = _eq7 ? _c[14] : _c[14] = _v15, _eq8 = _$$equals(_c[15], _v9 > 0), _v18 = _eq8 ? _c[15] : _c[15] = _v9 > 0, _eq9 = _$$equals(_c[16], setCount), _v19 = _eq9 ? _c[16] : _c[16] = setCount, _v20 = _eq9 ? _c[17] : _c[17] = ()=>setCount(0), _eq10 = _$$equals(_c[18], _v20), _v21 = _eq10 ? _c[18] : _c[18] = _v20, _eq11 = _eq8 && _eq10, _v22 = _eq11 ? _c[19] : _c[19] = /*#__PURE__*/ _jsx(\\"button\\", {
-        disabled: _v18,
-        onClick: _v21,
+        _v17 = _v19;
+    } else _v17 = _v18;
+    let _eq7 = _$$equals(_c, 17, _v17), _v20 = _eq7 ? _c[17] : _c[17] = _v17, _v21 = _eq3 ? _c[18] : _c[18] = _v10 > 0, _eq8 = _$$equals(_c, 19, _v21), _v22 = _eq8 ? _c[19] : _c[19] = _v21, _eq9 = _$$equals(_c, 20, setCount), _v23 = _eq9 ? _c[20] : _c[20] = setCount, _v24 = _eq9 ? _c[21] : _c[21] = ()=>setCount(0), _eq10 = _$$equals(_c, 22, _v24), _v25 = _eq10 ? _c[22] : _c[22] = _v24, _eq11 = _eq8 && _eq10, _v26 = _eq11 ? _c[23] : _c[23] = /*#__PURE__*/ _jsx(\\"button\\", {
+        disabled: _v22,
+        onClick: _v25,
         children: \\"Reset Count\\"
-    }), _eq12 = _$$equals(_c[20], _v22), _v23 = _eq12 ? _c[20] : _c[20] = _v22, _eq13 = _eq4 && _eq6 && _eq7 && _eq12, _v24 = _eq13 ? _c[21] : _c[21] = /*#__PURE__*/ _jsxs(\\"div\\", {
+    }), _eq12 = _$$equals(_c, 24, _v26), _v27 = _eq12 ? _c[24] : _c[24] = _v26, _eq13 = _eq4 && _eq6 && _eq7 && _eq12, _v28 = _eq13 ? _c[25] : _c[25] = /*#__PURE__*/ _jsxs(\\"div\\", {
         children: [
-            _v11,
-            _v14,
-            _v17,
-            _v23
+            _v13,
+            _v16,
+            _v20,
+            _v27
         ]
     });
-    return _v24;
+    return _v28;
 }
 export default memo(Sukka);
 "
@@ -66,51 +66,51 @@ import { $$cache as _$$cache } from \\"forgetti/runtime\\";
 import { $$equals as _$$equals } from \\"forgetti/runtime\\";
 import { useState } from 'react';
 export default function Sukka() {
-    let _c = _$$cache(_useMemo, 22);
+    let _c = _$$cache(_useMemo, 26);
     const [count, setCount] = useState(0);
     let _v = _c[0] ||= {
         current: null
     };
     const singletonRef = _v;
-    let _eq = _$$equals(_c[1], singletonRef), _v2 = _eq ? _c[1] : _c[1] = singletonRef, _v3 = _eq ? _c[2] : _c[2] = _v2.current, _eq2 = _$$equals(_c[3], _v3), _v4 = _eq2 ? _c[3] : _c[3] = _v3;
-    if (!_v4) {
-        let _c2 = _c[4] ||= new Array(1), _v5 = _c2[0] ||= new AbortController(), _v6 = _v2.current = _v5;
-        _v6;
+    let _eq = _$$equals(_c, 1, singletonRef), _v2 = _eq ? _c[1] : _c[1] = singletonRef, _v3 = _eq ? _c[2] : _c[2] = _v2.current, _eq2 = _$$equals(_c, 3, _v3), _v4 = _eq2 ? _c[3] : _c[3] = _v3, _v5 = _eq2 ? _c[4] : _c[4] = !_v4;
+    if (_v5) {
+        let _c2 = _c[5] ||= new Array(1), _v6 = _c2[0] ||= new AbortController(), _v7 = _v2.current = _v6;
+        _v7;
     }
-    let _v7 = _c[5] ||= [], _v8 = _c[6] ||= ()=>setCount((count)=>count + 1);
-    const handleButtonClick = _v8;
-    let _eq3 = _$$equals(_c[7], count), _v9 = _eq3 ? _c[7] : _c[7] = count;
-    if (_v9 > 10) {
+    let _v8 = _c[6] ||= [], _v9 = _c[7] ||= ()=>setCount((count)=>count + 1);
+    const handleButtonClick = _v9;
+    let _eq3 = _$$equals(_c, 8, count), _v10 = _eq3 ? _c[8] : _c[8] = count, _v11 = _eq3 ? _c[9] : _c[9] = _v10 > 10;
+    if (_v11) {
         return null;
     }
-    let _v10 = _eq3 ? _c[8] : _c[8] = /*#__PURE__*/ _jsxs(\\"p\\", {
+    let _v12 = _eq3 ? _c[10] : _c[10] = /*#__PURE__*/ _jsxs(\\"p\\", {
         children: [
             \\"Count: \\",
-            _v9
+            _v10
         ]
-    }), _eq4 = _$$equals(_c[9], _v10), _v11 = _eq4 ? _c[9] : _c[9] = _v10, _eq5 = _$$equals(_c[10], handleButtonClick), _v12 = _eq5 ? _c[10] : _c[10] = handleButtonClick, _v13 = _eq5 ? _c[11] : _c[11] = /*#__PURE__*/ _jsx(\\"button\\", {
-        onClick: _v12,
+    }), _eq4 = _$$equals(_c, 11, _v12), _v13 = _eq4 ? _c[11] : _c[11] = _v12, _eq5 = _$$equals(_c, 12, handleButtonClick), _v14 = _eq5 ? _c[12] : _c[12] = handleButtonClick, _v15 = _eq5 ? _c[13] : _c[13] = /*#__PURE__*/ _jsx(\\"button\\", {
+        onClick: _v14,
         children: \\"Increment\\"
-    }), _eq6 = _$$equals(_c[12], _v13), _v14 = _eq6 ? _c[12] : _c[12] = _v13, _v15;
-    if (_v9 > 10) {
-        let _c3 = _c[13] ||= new Array(1), _v16 = _c3[0] ||= /*#__PURE__*/ _jsx(\\"p\\", {
+    }), _eq6 = _$$equals(_c, 14, _v15), _v16 = _eq6 ? _c[14] : _c[14] = _v15, _v18 = _eq3 ? _c[15] : _c[15] = _v10 > 10, _v17;
+    if (_v18) {
+        let _c3 = _c[16] ||= new Array(1), _v19 = _c3[0] ||= /*#__PURE__*/ _jsx(\\"p\\", {
             children: \\"Count is higher than 10\\"
         });
-        _v15 = _v16;
-    } else _v15 = _v9 > 10;
-    let _eq7 = _$$equals(_c[14], _v15), _v17 = _eq7 ? _c[14] : _c[14] = _v15, _eq8 = _$$equals(_c[15], _v9 > 0), _v18 = _eq8 ? _c[15] : _c[15] = _v9 > 0, _eq9 = _$$equals(_c[16], setCount), _v19 = _eq9 ? _c[16] : _c[16] = setCount, _v20 = _eq9 ? _c[17] : _c[17] = ()=>setCount(0), _eq10 = _$$equals(_c[18], _v20), _v21 = _eq10 ? _c[18] : _c[18] = _v20, _eq11 = _eq8 && _eq10, _v22 = _eq11 ? _c[19] : _c[19] = /*#__PURE__*/ _jsx(\\"button\\", {
-        disabled: _v18,
-        onClick: _v21,
+        _v17 = _v19;
+    } else _v17 = _v18;
+    let _eq7 = _$$equals(_c, 17, _v17), _v20 = _eq7 ? _c[17] : _c[17] = _v17, _v21 = _eq3 ? _c[18] : _c[18] = _v10 > 0, _eq8 = _$$equals(_c, 19, _v21), _v22 = _eq8 ? _c[19] : _c[19] = _v21, _eq9 = _$$equals(_c, 20, setCount), _v23 = _eq9 ? _c[20] : _c[20] = setCount, _v24 = _eq9 ? _c[21] : _c[21] = ()=>setCount(0), _eq10 = _$$equals(_c, 22, _v24), _v25 = _eq10 ? _c[22] : _c[22] = _v24, _eq11 = _eq8 && _eq10, _v26 = _eq11 ? _c[23] : _c[23] = /*#__PURE__*/ _jsx(\\"button\\", {
+        disabled: _v22,
+        onClick: _v25,
         children: \\"Reset Count\\"
-    }), _eq12 = _$$equals(_c[20], _v22), _v23 = _eq12 ? _c[20] : _c[20] = _v22, _eq13 = _eq4 && _eq6 && _eq7 && _eq12, _v24 = _eq13 ? _c[21] : _c[21] = /*#__PURE__*/ _jsxs(\\"div\\", {
+    }), _eq12 = _$$equals(_c, 24, _v26), _v27 = _eq12 ? _c[24] : _c[24] = _v26, _eq13 = _eq4 && _eq6 && _eq7 && _eq12, _v28 = _eq13 ? _c[25] : _c[25] = /*#__PURE__*/ _jsxs(\\"div\\", {
         children: [
-            _v11,
-            _v14,
-            _v17,
-            _v23
+            _v13,
+            _v16,
+            _v20,
+            _v27
         ]
     });
-    return _v24;
+    return _v28;
 }
 "
 `;
@@ -128,9 +128,9 @@ export default function Example() {
         4
     ];
     const value = _v;
-    let _eq = _$$equals(_c[1], value), _v2 = _eq ? _c[1] : _c[1] = value, _v3 = _c[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
+    let _eq = _$$equals(_c, 1, value), _v2 = _eq ? _c[1] : _c[1] = value, _v3 = _c[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
             children: i
-        }, i), _v4 = _eq ? _c[3] : _c[3] = _v2.map(_v3), _eq2 = _$$equals(_c[4], _v4), _v5 = _eq2 ? _c[4] : _c[4] = _v4, _v6 = _eq2 ? _c[5] : _c[5] = /*#__PURE__*/ _jsx(\\"div\\", {
+        }, i), _v4 = _eq ? _c[3] : _c[3] = _v2.map(_v3), _eq2 = _$$equals(_c, 4, _v4), _v5 = _eq2 ? _c[4] : _c[4] = _v4, _v6 = _eq2 ? _c[5] : _c[5] = /*#__PURE__*/ _jsx(\\"div\\", {
         children: _v5
     });
     return _v6;
@@ -151,9 +151,9 @@ export default function Example() {
         4
     ];
     const value = _v;
-    let _eq = _$$equals(_c[1], value), _v2 = _eq ? _c[1] : _c[1] = value, _v3 = _c[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
+    let _eq = _$$equals(_c, 1, value), _v2 = _eq ? _c[1] : _c[1] = value, _v3 = _c[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
             children: i
-        }, i), _v4 = _eq ? _c[3] : _c[3] = _v2.map(_v3), _eq2 = _$$equals(_c[4], _v4), _v5 = _eq2 ? _c[4] : _c[4] = _v4, _v6 = _eq2 ? _c[5] : _c[5] = /*#__PURE__*/ _jsx(\\"div\\", {
+        }, i), _v4 = _eq ? _c[3] : _c[3] = _v2.map(_v3), _eq2 = _$$equals(_c, 4, _v4), _v5 = _eq2 ? _c[4] : _c[4] = _v4, _v6 = _eq2 ? _c[5] : _c[5] = /*#__PURE__*/ _jsx(\\"div\\", {
         children: _v5
     });
     return _v6;
@@ -166,9 +166,9 @@ export const AnotherExmaple = ()=>{
         4
     ];
     const value = _v7;
-    let _eq3 = _$$equals(_c2[1], value), _v8 = _eq3 ? _c2[1] : _c2[1] = value, _v9 = _c2[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
+    let _eq3 = _$$equals(_c2, 1, value), _v8 = _eq3 ? _c2[1] : _c2[1] = value, _v9 = _c2[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
             children: i
-        }, i), _v10 = _eq3 ? _c2[3] : _c2[3] = _v8.map(_v9), _eq4 = _$$equals(_c2[4], _v10), _v11 = _eq4 ? _c2[4] : _c2[4] = _v10, _v12 = _eq4 ? _c2[5] : _c2[5] = /*#__PURE__*/ _jsx(\\"div\\", {
+        }, i), _v10 = _eq3 ? _c2[3] : _c2[3] = _v8.map(_v9), _eq4 = _$$equals(_c2, 4, _v10), _v11 = _eq4 ? _c2[4] : _c2[4] = _v10, _v12 = _eq4 ? _c2[5] : _c2[5] = /*#__PURE__*/ _jsx(\\"div\\", {
         children: _v11
     });
     return _v12;
