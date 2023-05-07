@@ -3,18 +3,27 @@
   "version": "0.1.4",
   "description": "A webpack loader that solves your hook spaghetti. Inspired by React Forget. Powered by forgetti.",
   "files": [
-    "dist"
+    "dist",
+    "next.js"
   ],
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "types": "./dist/index.d.ts",
       "module": "./dist/index.m.js",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs",
       "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "module": "./dist/*.m.js",
+      "import": "./dist/*.mjs",
+      "require": "./dist/*.cjs",
+      "default": "./dist/*.js"
     }
   },
   "scripts": {
@@ -65,6 +74,7 @@
     "memfs": "^3.5.1",
     "mocha": "^10.2.0",
     "mocha-chai-jest-snapshot": "^1.1.4",
+    "next": "^13.4.1",
     "rollup": "^3.20.7",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-swc3": "^0.8.1",
