@@ -1,6 +1,6 @@
 # forgetti-loader
 
-A Webpack loader that solves your hook spaghetti. Inspired by React Forget. Powered by Alexis H. Munsayac's [Forgetti](https://github.com/lxsmnsyc/forgetti).
+A Webpack loader and a Next.js plugin that solves your hook spaghetti. Inspired by React Forget. Powered by Alexis H. Munsayac's [Forgetti](https://github.com/lxsmnsyc/forgetti).
 
 ## What is Forgetti?
 
@@ -23,6 +23,8 @@ pnpm add -D forgetti-loader
 ```
 
 ## Usage
+
+### Webpack
 
 ```js
 // webpack.config.js
@@ -58,10 +60,25 @@ module.exports = {
 };
 ```
 
+### Next.js
+
+```js
+// next.config.js
+const withForgetti = require('forgetti-loader/next');
+
+module.exports = withForgetti({
+  // Forgetti options. See https://github.com/lxsmnsyc/forgetti/tree/main#configuration for more details.
+  preset: 'react',
+  // preset: 'preact',
+  // preset: {}
+})({
+  // Your Next.js config goes here.
+});
+```
+
 ## Author
 
 **forgetti-loader** © [Sukka](https://github.com/SukkaW), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by Sukka with help from contributors ([list](https://github.com/SukkaW/forgetti-loader/graphs/contributors)).
 
 > [Personal Website](https://skk.moe) · [Blog](https://blog.skk.moe) · GitHub [@SukkaW](https://github.com/SukkaW) · Telegram Channel [@SukkaChannel](https://t.me/SukkaChannel) · Twitter [@isukkaw](https://twitter.com/isukkaw) · Mastodon [@sukka@acg.mn](https://acg.mn/@sukka) · Keybase [@sukka](https://keybase.io/sukka)
- 

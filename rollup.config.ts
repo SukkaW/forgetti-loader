@@ -1,3 +1,5 @@
+import path from 'path';
+
 import { defineConfig } from 'rollup';
 import { swc } from 'rollup-plugin-swc3';
 import dts from 'rollup-plugin-dts';
@@ -9,45 +11,55 @@ const externalModules = Object.keys(pkgJson.dependencies).concat(Object.keys(pkg
 
 const external = (id: string) => externalModules.some((name) => id === name || id.startsWith(`${name}/`));
 
-export default defineConfig([
-  {
-    input: 'src/index.ts',
-    output: [
-      {
-        file: 'dist/index.js',
-        format: 'commonjs'
-      },
-      {
-        file: 'dist/index.cjs',
-        format: 'commonjs'
-      },
-      {
-        file: 'dist/index.mjs',
-        format: 'esm'
-      },
-      {
-        file: 'dist/index.m.js',
-        format: 'esm'
-      }
-    ],
-    plugins: [swc({
-      jsc: {
-        target: 'es2018',
-        minify: {
-          compress: { passes: 3 },
-          mangle: {}
+const buildMatrix = (inputName: string) => {
+  const baseName = path.basename(inputName, path.extname(inputName));
+  return defineConfig([
+    {
+      input: `src/${inputName}`,
+      output: [
+        {
+          file: `dist/${baseName}.js`,
+          format: 'commonjs'
+        },
+        {
+          file: `dist/${baseName}.cjs`,
+          format: 'commonjs'
+        },
+        {
+          file: `dist/${baseName}.mjs`,
+          format: 'esm'
+        },
+        {
+          file: `dist/${baseName}.m.js`,
+          format: 'esm'
         }
-      },
-      minify: true
-    })],
-    external
-  },
-  {
-    input: 'src/index.ts',
-    output: {
-      file: 'dist/index.d.ts'
+      ],
+      plugins: [swc({
+        jsc: {
+          target: 'es2018',
+          minify: {
+            compress: { passes: 3 },
+            mangle: {},
+            module: true,
+            keep_fnames: false
+          }
+        },
+        minify: true
+      })],
+      external
     },
-    // @ts-expect-error -- rollup-plugin-dts type is completely bullshit
-    plugins: [dts.default()]
-  }
+    {
+      input: `src/${inputName}`,
+      output: {
+        file: `dist/${baseName}.d.ts`
+      },
+      // @ts-expect-error -- rollup-plugin-dts type is completely bullshit
+      plugins: [dts.default()]
+    }
+  ]);
+};
+
+export default defineConfig([
+  ...buildMatrix('index.ts'),
+  ...buildMatrix('next.ts')
 ]);
