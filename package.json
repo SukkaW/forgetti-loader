@@ -18,12 +18,12 @@
       "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
-    "./*": {
-      "types": "./dist/*.d.ts",
-      "module": "./dist/*.m.js",
-      "import": "./dist/*.mjs",
-      "require": "./dist/*.cjs",
-      "default": "./dist/*.js"
+    "./next": {
+      "types": "./dist/next.d.ts",
+      "module": "./dist/next.m.js",
+      "import": "./dist/next.mjs",
+      "require": "./dist/next.cjs",
+      "default": "./dist/next.js"
     }
   },
   "scripts": {
@@ -82,7 +82,7 @@
     "webpack": "^5.82.0"
   },
   "peerDependencies": {
-    "forgetti": "^0.4.6"
+    "forgetti": "^0.4 || ^0.5"
   },
   "engines": {
     "node": ">=16"
