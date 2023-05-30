@@ -46,7 +46,7 @@ module.exports = {
             {
               loader: 'forgetti-loader',
               options: defineForgettiLoaderOptions({
-                // Forgetti options. See https://github.com/lxsmnsyc/forgetti/tree/main#configuration for more details.
+                // Forgetti options. See https://github.com/lxsmnsyc/forgetti/blob/main/docs/configuration.md for more details.
                 preset: 'react',
                 // preset: 'preact',
                 // preset: {}
@@ -67,7 +67,7 @@ module.exports = {
 const withForgetti = require('forgetti-loader/next');
 
 module.exports = withForgetti({
-  // Forgetti options. See https://github.com/lxsmnsyc/forgetti/tree/main#configuration for more details.
+  // Forgetti options. See https://github.com/lxsmnsyc/forgetti/blob/main/docs/configuration.md for more details.
   preset: 'react',
   // preset: 'preact',
   // preset: {}
