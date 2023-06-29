@@ -1,6 +1,6 @@
 # forgetti-loader
 
-A webpack loader and a Next.js plugin that brings an auto-memoization compiler to solve your hook spaghetti. Powered by [Forgetti](https://github.com/lxsmnsyc/forgetti) which is inspired by React Forget.
+A webpack loader, a [rspack](https://www.rspack.dev) loader and a Next.js plugin that brings an auto-memoization compiler to solve your hook spaghetti. Powered by [Forgetti](https://github.com/lxsmnsyc/forgetti) which is inspired by React Forget.
 
 ## What is Forgetti?
 
@@ -24,10 +24,10 @@ pnpm add -D forgetti-loader
 
 ## Usage
 
-### Webpack
+### Webpack / Rspack
 
 ```js
-// webpack.config.js
+// webpack.config.js / rspack.config.js
 
 // You can leverage your IDE's Intellisense (autocompletion, type check, etc.) with the helper function:
 const { defineForgettiLoaderOptions } = require('forgetti-loader');
@@ -41,6 +41,7 @@ module.exports = {
           exclude: /node_modules/,
           use: [
             // babel-loader, swc-loader, esbuild-loader, or anything you like to transpile JSX should go here.
+            // If you are using rspack, the rspack's buiilt-in react transformation is sufficient.
             // { loader: 'swc-loader' },
             // Now add forgetti-loader
             {
