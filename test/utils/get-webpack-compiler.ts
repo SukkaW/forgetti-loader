@@ -9,7 +9,7 @@ import pkgJson from '../../package.json';
 import { builtinModules } from 'module';
 import type { Options as SwcOptions } from '@swc/core';
 
-const externalModules = Object.keys(pkgJson.dependencies)
+export const externalModules = Object.keys(pkgJson.dependencies)
   .concat(Object.keys(pkgJson.peerDependencies))
   .concat(builtinModules)
   .concat(['react', 'react/jsx-runtime', 'forgetti', 'forgetti/runtime', 'preact/hooks', 'preact/compat', 'preact']);
@@ -41,14 +41,14 @@ const useSwcLoader = (isTSX: boolean) => ({
 export default (fixture: string, loaderOptions: ForgettiLoaderOptions = { preset: 'react' }, config: webpack.Configuration = {}) => {
   const fullConfig: webpack.Configuration = {
     mode: 'development',
-    target: 'node',
+    target: 'web',
     devtool: config.devtool || false,
     context: path.resolve(__dirname, '../fixtures'),
     entry: Array.isArray(fixture)
       ? fixture
       : path.resolve(__dirname, '../fixtures', fixture),
     output: {
-      path: path.resolve(__dirname, '../outputs'),
+      path: '/',
       filename: '[name].bundle.js',
       chunkFilename: '[name].chunk.js',
       publicPath: '/webpack/public/path/',
@@ -96,8 +96,9 @@ export default (fixture: string, loaderOptions: ForgettiLoaderOptions = { preset
   };
 
   const compiler = webpack(fullConfig);
+  const fs = createFsFromVolume(new Volume()) as unknown as typeof import('fs');
 
-  compiler.outputFileSystem = createFsFromVolume(new Volume());
+  compiler.outputFileSystem = fs;
 
-  return compiler;
+  return [compiler, fs] as const;
 };

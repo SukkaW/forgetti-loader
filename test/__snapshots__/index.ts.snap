@@ -1,177 +1,600 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`forgetti-loader should accept loader option 1`] = `
+exports[`forgetti-loader (rspack) should accept loader option 1`] = `
+"(function() {
+var __webpack_modules__ = {
+\\"forgetti/runtime\\": function (module, exports, __webpack_require__) {
+module.exports = forgetti/runtime},
+\\"preact/compat\\": function (module, exports, __webpack_require__) {
+module.exports = preact/compat},
+\\"preact/hooks\\": function (module, exports, __webpack_require__) {
+module.exports = preact/hooks},
+\\"react/jsx-runtime\\": function (module, exports, __webpack_require__) {
+module.exports = react/jsx-runtime},
+\\"./preact.tsx\\": function (module, exports, __webpack_require__) {
+\\"use strict\\";
+Object.defineProperty(exports, \\"__esModule\\", {
+    value: true
+});
+Object.defineProperty(exports, \\"default\\", {
+    enumerable: true,
+    get: function() {
+        return _default;
+    }
+});
+var _jsxruntime = __webpack_require__(\\"react/jsx-runtime\\");
+var _hooks = __webpack_require__(\\"preact/hooks\\");
+var _runtime = __webpack_require__(\\"forgetti/runtime\\");
+var _compat = __webpack_require__(\\"preact/compat\\");
+const _Memo = (0, _runtime.$$memo)(_compat.memo, (_values)=>(0, _jsxruntime.jsxs)(\\"div\\", {
+        children: [
+            (0, _jsxruntime.jsxs)(\\"p\\", {
+                children: [
+                    \\"Count: \\",
+                    _values[0]
+                ]
+            }),
+            (0, _jsxruntime.jsx)(\\"button\\", {
+                onClick: _values[1],
+                children: \\"Increment\\"
+            }),
+            _values[2],
+            (0, _jsxruntime.jsx)(\\"button\\", {
+                disabled: _values[3],
+                onClick: _values[4],
+                children: \\"Reset Count\\"
+            })
+        ]
+    })), _Memo2 = (0, _runtime.$$memo)(_compat.memo, (_values2)=>(0, _jsxruntime.jsx)(\\"p\\", {
+        children: \\"Count is higher than 10\\"
+    }));
+function Sukka() {
+    let _cache = (0, _runtime.$$cache)(_hooks.useRef, 21);
+    const [count, setCount] = (0, _hooks.useState)(0);
+    const singletonRef = 0 in _cache ? _cache[0] : _cache[0] = {
+        current: null
+    };
+    let _equals = (0, _runtime.$$equals)(_cache, 1, singletonRef), _value2 = _equals ? _cache[1] : _cache[1] = singletonRef, _value3 = _equals ? _cache[2] : _cache[2] = _value2.current, _equals2 = (0, _runtime.$$equals)(_cache, 3, _value3), _value4 = _equals2 ? _cache[3] : _cache[3] = _value3;
+    if (_equals2 ? _cache[4] : _cache[4] = !_value4) {
+        let _cache2 = (0, _runtime.$$branch)(_cache, 5, 2);
+        ((0, _runtime.$$equals)(_cache2, 0, singletonRef) ? _cache2[0] : _cache2[0] = singletonRef).current = 1 in _cache2 ? _cache2[1] : _cache2[1] = new AbortController();
+    }
+    let _equals4 = (0, _runtime.$$equals)(_cache, 6, count), _value8 = _equals4 ? _cache[6] : _cache[6] = count;
+    if (_equals4 ? _cache[7] : _cache[7] = _value8 > 10) return null;
+    let _value10 = 8 in _cache ? _cache[8] : _cache[8] = [], _value11 = 9 in _cache ? _cache[9] : _cache[9] = ()=>setCount((count)=>count + 1), _condition = _equals4 ? _cache[10] : _cache[10] = _value8 > 10;
+    if (_condition) {
+        let _cache3 = (0, _runtime.$$branch)(_cache, 11, 1);
+        _condition = 0 in _cache3 ? _cache3[0] : _cache3[0] = (0, _jsxruntime.jsx)(_Memo2, {
+            v: []
+        });
+    }
+    let _equals5 = (0, _runtime.$$equals)(_cache, 12, _condition), _value14 = _equals5 ? _cache[12] : _cache[12] = _condition, _value15 = _equals4 ? _cache[13] : _cache[13] = _value8 > 0, _equals6 = (0, _runtime.$$equals)(_cache, 14, _value15), _value16 = _equals6 ? _cache[14] : _cache[14] = _value15, _equals7 = (0, _runtime.$$equals)(_cache, 15, setCount), _value17 = _equals7 ? _cache[15] : _cache[15] = setCount, _value18 = _equals7 ? _cache[16] : _cache[16] = ()=>setCount(0), _equals8 = (0, _runtime.$$equals)(_cache, 17, _value18), _value19 = _equals8 ? _cache[17] : _cache[17] = _value18, _value20 = _equals4 && _equals5 && _equals6 && _equals8 ? _cache[18] : _cache[18] = [
+        _value8,
+        _value11,
+        _value14,
+        _value16,
+        _value19
+    ], _equals10 = (0, _runtime.$$equals)(_cache, 19, _value20), _value21 = _equals10 ? _cache[19] : _cache[19] = _value20;
+    return _equals10 ? _cache[20] : _cache[20] = (0, _jsxruntime.jsx)(_Memo, {
+        v: _value21
+    });
+}
+var _default = (0, _compat.memo)(Sukka);
+},
+
+}
+// The module cache
+ var __webpack_module_cache__ = {};
+function __webpack_require__(moduleId) {
+// Check if module is in cache
+        var cachedModule = __webpack_module_cache__[moduleId];
+        if (cachedModule !== undefined) {
+      return cachedModule.exports;
+      }
+      // Create a new module (and put it into the cache)
+      var module = (__webpack_module_cache__[moduleId] = {
+       exports: {}
+      });
+      // Execute the module function
+      __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+// Return the exports of the module
+ return module.exports;
+
+}
+var __webpack_exports__ = __webpack_require__(\\"./preact.tsx\\");
+})()
+"
+`;
+
+exports[`forgetti-loader (rspack) should optimize complex component 1`] = `
+"(function() {
+var __webpack_modules__ = {
+\\"forgetti/runtime\\": function (module, exports, __webpack_require__) {
+module.exports = forgetti/runtime},
+\\"react\\": function (module, exports, __webpack_require__) {
+module.exports = react},
+\\"react/jsx-runtime\\": function (module, exports, __webpack_require__) {
+module.exports = react/jsx-runtime},
+\\"./complex.tsx\\": function (module, exports, __webpack_require__) {
+\\"use strict\\";
+Object.defineProperty(exports, \\"__esModule\\", {
+    value: true
+});
+Object.defineProperty(exports, \\"default\\", {
+    enumerable: true,
+    get: function() {
+        return Sukka;
+    }
+});
+var _jsxruntime = __webpack_require__(\\"react/jsx-runtime\\");
+var _react = __webpack_require__(\\"react\\");
+var _runtime = __webpack_require__(\\"forgetti/runtime\\");
+const _Memo = (0, _runtime.$$memo)(_react.memo, (_values)=>(0, _jsxruntime.jsxs)(\\"div\\", {
+        children: [
+            (0, _jsxruntime.jsxs)(\\"p\\", {
+                children: [
+                    \\"Count: \\",
+                    _values[0]
+                ]
+            }),
+            (0, _jsxruntime.jsx)(\\"button\\", {
+                onClick: _values[1],
+                children: \\"Increment\\"
+            }),
+            _values[2],
+            (0, _jsxruntime.jsx)(\\"button\\", {
+                disabled: _values[3],
+                onClick: _values[4],
+                children: \\"Reset Count\\"
+            })
+        ]
+    })), _Memo2 = (0, _runtime.$$memo)(_react.memo, (_values2)=>(0, _jsxruntime.jsx)(\\"p\\", {
+        children: \\"Count is higher than 10\\"
+    }));
+function Sukka() {
+    let _cache = (0, _runtime.$$cache)(_react.useRef, 21);
+    const [count, setCount] = (0, _react.useState)(0);
+    const singletonRef = 0 in _cache ? _cache[0] : _cache[0] = {
+        current: null
+    };
+    let _equals = (0, _runtime.$$equals)(_cache, 1, singletonRef), _value2 = _equals ? _cache[1] : _cache[1] = singletonRef, _value3 = _equals ? _cache[2] : _cache[2] = _value2.current, _equals2 = (0, _runtime.$$equals)(_cache, 3, _value3), _value4 = _equals2 ? _cache[3] : _cache[3] = _value3;
+    if (_equals2 ? _cache[4] : _cache[4] = !_value4) {
+        let _cache2 = (0, _runtime.$$branch)(_cache, 5, 2);
+        ((0, _runtime.$$equals)(_cache2, 0, singletonRef) ? _cache2[0] : _cache2[0] = singletonRef).current = 1 in _cache2 ? _cache2[1] : _cache2[1] = new AbortController();
+    }
+    let _equals4 = (0, _runtime.$$equals)(_cache, 6, count), _value8 = _equals4 ? _cache[6] : _cache[6] = count;
+    if (_equals4 ? _cache[7] : _cache[7] = _value8 > 10) return null;
+    let _value10 = 8 in _cache ? _cache[8] : _cache[8] = [], _value11 = 9 in _cache ? _cache[9] : _cache[9] = ()=>setCount((count)=>count + 1), _condition = _equals4 ? _cache[10] : _cache[10] = _value8 > 10;
+    if (_condition) {
+        let _cache3 = (0, _runtime.$$branch)(_cache, 11, 1);
+        _condition = 0 in _cache3 ? _cache3[0] : _cache3[0] = (0, _jsxruntime.jsx)(_Memo2, {
+            v: []
+        });
+    }
+    let _equals5 = (0, _runtime.$$equals)(_cache, 12, _condition), _value14 = _equals5 ? _cache[12] : _cache[12] = _condition, _value15 = _equals4 ? _cache[13] : _cache[13] = _value8 > 0, _equals6 = (0, _runtime.$$equals)(_cache, 14, _value15), _value16 = _equals6 ? _cache[14] : _cache[14] = _value15, _equals7 = (0, _runtime.$$equals)(_cache, 15, setCount), _value17 = _equals7 ? _cache[15] : _cache[15] = setCount, _value18 = _equals7 ? _cache[16] : _cache[16] = ()=>setCount(0), _equals8 = (0, _runtime.$$equals)(_cache, 17, _value18), _value19 = _equals8 ? _cache[17] : _cache[17] = _value18, _value20 = _equals4 && _equals5 && _equals6 && _equals8 ? _cache[18] : _cache[18] = [
+        _value8,
+        _value11,
+        _value14,
+        _value16,
+        _value19
+    ], _equals10 = (0, _runtime.$$equals)(_cache, 19, _value20), _value21 = _equals10 ? _cache[19] : _cache[19] = _value20;
+    return _equals10 ? _cache[20] : _cache[20] = (0, _jsxruntime.jsx)(_Memo, {
+        v: _value21
+    });
+}
+},
+
+}
+// The module cache
+ var __webpack_module_cache__ = {};
+function __webpack_require__(moduleId) {
+// Check if module is in cache
+        var cachedModule = __webpack_module_cache__[moduleId];
+        if (cachedModule !== undefined) {
+      return cachedModule.exports;
+      }
+      // Create a new module (and put it into the cache)
+      var module = (__webpack_module_cache__[moduleId] = {
+       exports: {}
+      });
+      // Execute the module function
+      __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+// Return the exports of the module
+ return module.exports;
+
+}
+var __webpack_exports__ = __webpack_require__(\\"./complex.tsx\\");
+})()
+"
+`;
+
+exports[`forgetti-loader (rspack) should work 1`] = `
+"(function() {
+var __webpack_modules__ = {
+\\"forgetti/runtime\\": function (module, exports, __webpack_require__) {
+module.exports = forgetti/runtime},
+\\"react\\": function (module, exports, __webpack_require__) {
+module.exports = react},
+\\"react/jsx-runtime\\": function (module, exports, __webpack_require__) {
+module.exports = react/jsx-runtime},
+\\"./simple.jsx\\": function (module, exports, __webpack_require__) {
+\\"use strict\\";
+Object.defineProperty(exports, \\"__esModule\\", {
+    value: true
+});
+Object.defineProperty(exports, \\"default\\", {
+    enumerable: true,
+    get: function() {
+        return Example;
+    }
+});
+var _jsxruntime = __webpack_require__(\\"react/jsx-runtime\\");
+var _react = __webpack_require__(\\"react\\");
+var _runtime = __webpack_require__(\\"forgetti/runtime\\");
+const _Memo = (0, _runtime.$$memo)(_react.memo, (_values)=>(0, _jsxruntime.jsx)(\\"div\\", {
+        children: _values[0]
+    })), _Memo2 = (0, _runtime.$$memo)(_react.memo, (_values2)=>(0, _jsxruntime.jsx)(\\"p\\", {
+        children: _values2[0]
+    }));
+function Example() {
+    let _cache = (0, _runtime.$$cache)(_react.useRef, 1);
+    return 0 in _cache ? _cache[0] : _cache[0] = (0, _jsxruntime.jsx)(_Memo, {
+        v: [
+            [
+                1,
+                2,
+                3,
+                4
+            ].map((i)=>(0, _jsxruntime.jsx)(_Memo2, {
+                    v: [
+                        i
+                    ]
+                }, i))
+        ]
+    });
+}
+},
+
+}
+// The module cache
+ var __webpack_module_cache__ = {};
+function __webpack_require__(moduleId) {
+// Check if module is in cache
+        var cachedModule = __webpack_module_cache__[moduleId];
+        if (cachedModule !== undefined) {
+      return cachedModule.exports;
+      }
+      // Create a new module (and put it into the cache)
+      var module = (__webpack_module_cache__[moduleId] = {
+       exports: {}
+      });
+      // Execute the module function
+      __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+// Return the exports of the module
+ return module.exports;
+
+}
+var __webpack_exports__ = __webpack_require__(\\"./simple.jsx\\");
+})()
+"
+`;
+
+exports[`forgetti-loader (rspack) should work with tsx 1`] = `
+"(function() {
+var __webpack_modules__ = {
+\\"forgetti/runtime\\": function (module, exports, __webpack_require__) {
+module.exports = forgetti/runtime},
+\\"react\\": function (module, exports, __webpack_require__) {
+module.exports = react},
+\\"react/jsx-runtime\\": function (module, exports, __webpack_require__) {
+module.exports = react/jsx-runtime},
+\\"./simple.tsx\\": function (module, exports, __webpack_require__) {
+\\"use strict\\";
+Object.defineProperty(exports, \\"__esModule\\", {
+    value: true
+});
+function _export(target, all) {
+    for(var name in all)Object.defineProperty(target, name, {
+        enumerable: true,
+        get: all[name]
+    });
+}
+_export(exports, {
+    default: function() {
+        return Example;
+    },
+    AnotherExmaple: function() {
+        return AnotherExmaple;
+    }
+});
+var _jsxruntime = __webpack_require__(\\"react/jsx-runtime\\");
+var _react = __webpack_require__(\\"react\\");
+var _runtime = __webpack_require__(\\"forgetti/runtime\\");
+const _Memo = (0, _runtime.$$memo)(_react.memo, (_values)=>(0, _jsxruntime.jsx)(\\"div\\", {
+        children: _values[0]
+    })), _Memo2 = (0, _runtime.$$memo)(_react.memo, (_values2)=>(0, _jsxruntime.jsx)(\\"p\\", {
+        children: _values2[0]
+    })), _Memo3 = (0, _runtime.$$memo)(_react.memo, (_values3)=>(0, _jsxruntime.jsx)(\\"div\\", {
+        children: _values3[0]
+    })), _Memo4 = (0, _runtime.$$memo)(_react.memo, (_values4)=>(0, _jsxruntime.jsx)(\\"p\\", {
+        children: _values4[0]
+    }));
+function Example() {
+    let _cache = (0, _runtime.$$cache)(_react.useRef, 1);
+    return 0 in _cache ? _cache[0] : _cache[0] = (0, _jsxruntime.jsx)(_Memo, {
+        v: [
+            [
+                1,
+                2,
+                3,
+                4
+            ].map((i)=>(0, _jsxruntime.jsx)(_Memo2, {
+                    v: [
+                        i
+                    ]
+                }, i))
+        ]
+    });
+}
+const AnotherExmaple = ()=>{
+    let _cache2 = (0, _runtime.$$cache)(_react.useRef, 1);
+    return 0 in _cache2 ? _cache2[0] : _cache2[0] = (0, _jsxruntime.jsx)(_Memo3, {
+        v: [
+            [
+                1,
+                2,
+                3,
+                4
+            ].map((i)=>(0, _jsxruntime.jsx)(_Memo4, {
+                    v: [
+                        i
+                    ]
+                }, i))
+        ]
+    });
+};
+},
+
+}
+// The module cache
+ var __webpack_module_cache__ = {};
+function __webpack_require__(moduleId) {
+// Check if module is in cache
+        var cachedModule = __webpack_module_cache__[moduleId];
+        if (cachedModule !== undefined) {
+      return cachedModule.exports;
+      }
+      // Create a new module (and put it into the cache)
+      var module = (__webpack_module_cache__[moduleId] = {
+       exports: {}
+      });
+      // Execute the module function
+      __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+// Return the exports of the module
+ return module.exports;
+
+}
+var __webpack_exports__ = __webpack_require__(\\"./simple.tsx\\");
+})()
+"
+`;
+
+exports[`forgetti-loader (webpack) should accept loader option 1`] = `
 "import { jsx as _jsx, jsxs as _jsxs } from \\"react/jsx-runtime\\";
-import { useMemo as _useMemo } from \\"preact/hooks\\";
+import { useRef as _useRef } from \\"preact/hooks\\";
 import { $$cache as _$$cache } from \\"forgetti/runtime\\";
+import { $$branch as _$$branch } from \\"forgetti/runtime\\";
 import { $$equals as _$$equals } from \\"forgetti/runtime\\";
+import { memo as _memo } from \\"preact/compat\\";
+import { $$memo as _$$memo } from \\"forgetti/runtime\\";
+const _Memo = _$$memo(_memo, (_values)=>/*#__PURE__*/ _jsxs(\\"div\\", {
+        children: [
+            /*#__PURE__*/ _jsxs(\\"p\\", {
+                children: [
+                    \\"Count: \\",
+                    _values[0]
+                ]
+            }),
+            /*#__PURE__*/ _jsx(\\"button\\", {
+                onClick: _values[1],
+                children: \\"Increment\\"
+            }),
+            _values[2],
+            /*#__PURE__*/ _jsx(\\"button\\", {
+                disabled: _values[3],
+                onClick: _values[4],
+                children: \\"Reset Count\\"
+            })
+        ]
+    })), _Memo2 = _$$memo(_memo, (_values2)=>/*#__PURE__*/ _jsx(\\"p\\", {
+        children: \\"Count is higher than 10\\"
+    }));
 /* eslint-disable @typescript-eslint/ban-ts-comment -- fixture */ /* eslint-disable import/no-unresolved -- fixture */ // @ts-nocheck
 import { useState } from 'preact/hooks';
 import { memo } from 'preact/compat';
 function Sukka() {
-    let _c = _$$cache(_useMemo, 26);
+    let _cache = _$$cache(_useRef, 21);
     const [count, setCount] = useState(0);
-    let _v = _c[0] ||= {
+    const singletonRef = 0 in _cache ? _cache[0] : _cache[0] = {
         current: null
     };
-    const singletonRef = _v;
-    let _eq = _$$equals(_c, 1, singletonRef), _v2 = _eq ? _c[1] : _c[1] = singletonRef, _v3 = _eq ? _c[2] : _c[2] = _v2.current, _eq2 = _$$equals(_c, 3, _v3), _v4 = _eq2 ? _c[3] : _c[3] = _v3, _v5 = _eq2 ? _c[4] : _c[4] = !_v4;
-    if (_v5) {
-        let _c2 = _c[5] ||= new Array(1), _v6 = _c2[0] ||= new AbortController(), _v7 = _v2.current = _v6;
-        _v7;
+    let _equals = _$$equals(_cache, 1, singletonRef), _value2 = _equals ? _cache[1] : _cache[1] = singletonRef, _value3 = _equals ? _cache[2] : _cache[2] = _value2.current, _equals2 = _$$equals(_cache, 3, _value3), _value4 = _equals2 ? _cache[3] : _cache[3] = _value3;
+    if (_equals2 ? _cache[4] : _cache[4] = !_value4) {
+        let _cache2 = _$$branch(_cache, 5, 2);
+        (_$$equals(_cache2, 0, singletonRef) ? _cache2[0] : _cache2[0] = singletonRef).current = 1 in _cache2 ? _cache2[1] : _cache2[1] = new AbortController();
     }
-    let _v8 = _c[6] ||= [], _v9 = _c[7] ||= ()=>setCount((count)=>count + 1);
-    const handleButtonClick = _v9;
-    let _eq3 = _$$equals(_c, 8, count), _v10 = _eq3 ? _c[8] : _c[8] = count, _v11 = _eq3 ? _c[9] : _c[9] = _v10 > 10;
-    if (_v11) {
+    let _equals4 = _$$equals(_cache, 6, count), _value8 = _equals4 ? _cache[6] : _cache[6] = count;
+    if (_equals4 ? _cache[7] : _cache[7] = _value8 > 10) {
         return null;
     }
-    let _v12 = _eq3 ? _c[10] : _c[10] = /*#__PURE__*/ _jsxs(\\"p\\", {
-        children: [
-            \\"Count: \\",
-            _v10
-        ]
-    }), _eq4 = _$$equals(_c, 11, _v12), _v13 = _eq4 ? _c[11] : _c[11] = _v12, _eq5 = _$$equals(_c, 12, handleButtonClick), _v14 = _eq5 ? _c[12] : _c[12] = handleButtonClick, _v15 = _eq5 ? _c[13] : _c[13] = /*#__PURE__*/ _jsx(\\"button\\", {
-        onClick: _v14,
-        children: \\"Increment\\"
-    }), _eq6 = _$$equals(_c, 14, _v15), _v16 = _eq6 ? _c[14] : _c[14] = _v15, _v18 = _eq3 ? _c[15] : _c[15] = _v10 > 10, _v17;
-    if (_v18) {
-        let _c3 = _c[16] ||= new Array(1), _v19 = _c3[0] ||= /*#__PURE__*/ _jsx(\\"p\\", {
-            children: \\"Count is higher than 10\\"
+    let _value10 = 8 in _cache ? _cache[8] : _cache[8] = [], _value11 = 9 in _cache ? _cache[9] : _cache[9] = ()=>setCount((count)=>count + 1), _condition = _equals4 ? _cache[10] : _cache[10] = _value8 > 10;
+    if (_condition) {
+        let _cache3 = _$$branch(_cache, 11, 1);
+        _condition = 0 in _cache3 ? _cache3[0] : _cache3[0] = /*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo2, {
+            v: []
         });
-        _v17 = _v19;
-    } else _v17 = _v18;
-    let _eq7 = _$$equals(_c, 17, _v17), _v20 = _eq7 ? _c[17] : _c[17] = _v17, _v21 = _eq3 ? _c[18] : _c[18] = _v10 > 0, _eq8 = _$$equals(_c, 19, _v21), _v22 = _eq8 ? _c[19] : _c[19] = _v21, _eq9 = _$$equals(_c, 20, setCount), _v23 = _eq9 ? _c[20] : _c[20] = setCount, _v24 = _eq9 ? _c[21] : _c[21] = ()=>setCount(0), _eq10 = _$$equals(_c, 22, _v24), _v25 = _eq10 ? _c[22] : _c[22] = _v24, _eq11 = _eq8 && _eq10, _v26 = _eq11 ? _c[23] : _c[23] = /*#__PURE__*/ _jsx(\\"button\\", {
-        disabled: _v22,
-        onClick: _v25,
-        children: \\"Reset Count\\"
-    }), _eq12 = _$$equals(_c, 24, _v26), _v27 = _eq12 ? _c[24] : _c[24] = _v26, _eq13 = _eq4 && _eq6 && _eq7 && _eq12, _v28 = _eq13 ? _c[25] : _c[25] = /*#__PURE__*/ _jsxs(\\"div\\", {
-        children: [
-            _v13,
-            _v16,
-            _v20,
-            _v27
-        ]
+    }
+    let _equals5 = _$$equals(_cache, 12, _condition), _value14 = _equals5 ? _cache[12] : _cache[12] = _condition, _value15 = _equals4 ? _cache[13] : _cache[13] = _value8 > 0, _equals6 = _$$equals(_cache, 14, _value15), _value16 = _equals6 ? _cache[14] : _cache[14] = _value15, _equals7 = _$$equals(_cache, 15, setCount), _value17 = _equals7 ? _cache[15] : _cache[15] = setCount, _value18 = _equals7 ? _cache[16] : _cache[16] = ()=>setCount(0), _equals8 = _$$equals(_cache, 17, _value18), _value19 = _equals8 ? _cache[17] : _cache[17] = _value18, _value20 = _equals4 && _equals5 && _equals6 && _equals8 ? _cache[18] : _cache[18] = [
+        _value8,
+        _value11,
+        _value14,
+        _value16,
+        _value19
+    ], _equals10 = _$$equals(_cache, 19, _value20), _value21 = _equals10 ? _cache[19] : _cache[19] = _value20;
+    return _equals10 ? _cache[20] : _cache[20] = /*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo, {
+        v: _value21
     });
-    return _v28;
 }
 export default memo(Sukka);
 "
 `;
 
-exports[`forgetti-loader should optimize complex component 1`] = `
+exports[`forgetti-loader (webpack) should optimize complex component 1`] = `
 "import { jsx as _jsx, jsxs as _jsxs } from \\"react/jsx-runtime\\";
-import { useMemo as _useMemo } from \\"react\\";
+import { useRef as _useRef } from \\"react\\";
 import { $$cache as _$$cache } from \\"forgetti/runtime\\";
+import { $$branch as _$$branch } from \\"forgetti/runtime\\";
 import { $$equals as _$$equals } from \\"forgetti/runtime\\";
+import { memo as _memo } from \\"react\\";
+import { $$memo as _$$memo } from \\"forgetti/runtime\\";
+const _Memo = _$$memo(_memo, (_values)=>/*#__PURE__*/ _jsxs(\\"div\\", {
+        children: [
+            /*#__PURE__*/ _jsxs(\\"p\\", {
+                children: [
+                    \\"Count: \\",
+                    _values[0]
+                ]
+            }),
+            /*#__PURE__*/ _jsx(\\"button\\", {
+                onClick: _values[1],
+                children: \\"Increment\\"
+            }),
+            _values[2],
+            /*#__PURE__*/ _jsx(\\"button\\", {
+                disabled: _values[3],
+                onClick: _values[4],
+                children: \\"Reset Count\\"
+            })
+        ]
+    })), _Memo2 = _$$memo(_memo, (_values2)=>/*#__PURE__*/ _jsx(\\"p\\", {
+        children: \\"Count is higher than 10\\"
+    }));
 import { useState } from 'react';
 export default function Sukka() {
-    let _c = _$$cache(_useMemo, 26);
+    let _cache = _$$cache(_useRef, 21);
     const [count, setCount] = useState(0);
-    let _v = _c[0] ||= {
+    const singletonRef = 0 in _cache ? _cache[0] : _cache[0] = {
         current: null
     };
-    const singletonRef = _v;
-    let _eq = _$$equals(_c, 1, singletonRef), _v2 = _eq ? _c[1] : _c[1] = singletonRef, _v3 = _eq ? _c[2] : _c[2] = _v2.current, _eq2 = _$$equals(_c, 3, _v3), _v4 = _eq2 ? _c[3] : _c[3] = _v3, _v5 = _eq2 ? _c[4] : _c[4] = !_v4;
-    if (_v5) {
-        let _c2 = _c[5] ||= new Array(1), _v6 = _c2[0] ||= new AbortController(), _v7 = _v2.current = _v6;
-        _v7;
+    let _equals = _$$equals(_cache, 1, singletonRef), _value2 = _equals ? _cache[1] : _cache[1] = singletonRef, _value3 = _equals ? _cache[2] : _cache[2] = _value2.current, _equals2 = _$$equals(_cache, 3, _value3), _value4 = _equals2 ? _cache[3] : _cache[3] = _value3;
+    if (_equals2 ? _cache[4] : _cache[4] = !_value4) {
+        let _cache2 = _$$branch(_cache, 5, 2);
+        (_$$equals(_cache2, 0, singletonRef) ? _cache2[0] : _cache2[0] = singletonRef).current = 1 in _cache2 ? _cache2[1] : _cache2[1] = new AbortController();
     }
-    let _v8 = _c[6] ||= [], _v9 = _c[7] ||= ()=>setCount((count)=>count + 1);
-    const handleButtonClick = _v9;
-    let _eq3 = _$$equals(_c, 8, count), _v10 = _eq3 ? _c[8] : _c[8] = count, _v11 = _eq3 ? _c[9] : _c[9] = _v10 > 10;
-    if (_v11) {
+    let _equals4 = _$$equals(_cache, 6, count), _value8 = _equals4 ? _cache[6] : _cache[6] = count;
+    if (_equals4 ? _cache[7] : _cache[7] = _value8 > 10) {
         return null;
     }
-    let _v12 = _eq3 ? _c[10] : _c[10] = /*#__PURE__*/ _jsxs(\\"p\\", {
-        children: [
-            \\"Count: \\",
-            _v10
-        ]
-    }), _eq4 = _$$equals(_c, 11, _v12), _v13 = _eq4 ? _c[11] : _c[11] = _v12, _eq5 = _$$equals(_c, 12, handleButtonClick), _v14 = _eq5 ? _c[12] : _c[12] = handleButtonClick, _v15 = _eq5 ? _c[13] : _c[13] = /*#__PURE__*/ _jsx(\\"button\\", {
-        onClick: _v14,
-        children: \\"Increment\\"
-    }), _eq6 = _$$equals(_c, 14, _v15), _v16 = _eq6 ? _c[14] : _c[14] = _v15, _v18 = _eq3 ? _c[15] : _c[15] = _v10 > 10, _v17;
-    if (_v18) {
-        let _c3 = _c[16] ||= new Array(1), _v19 = _c3[0] ||= /*#__PURE__*/ _jsx(\\"p\\", {
-            children: \\"Count is higher than 10\\"
+    let _value10 = 8 in _cache ? _cache[8] : _cache[8] = [], _value11 = 9 in _cache ? _cache[9] : _cache[9] = ()=>setCount((count)=>count + 1), _condition = _equals4 ? _cache[10] : _cache[10] = _value8 > 10;
+    if (_condition) {
+        let _cache3 = _$$branch(_cache, 11, 1);
+        _condition = 0 in _cache3 ? _cache3[0] : _cache3[0] = /*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo2, {
+            v: []
         });
-        _v17 = _v19;
-    } else _v17 = _v18;
-    let _eq7 = _$$equals(_c, 17, _v17), _v20 = _eq7 ? _c[17] : _c[17] = _v17, _v21 = _eq3 ? _c[18] : _c[18] = _v10 > 0, _eq8 = _$$equals(_c, 19, _v21), _v22 = _eq8 ? _c[19] : _c[19] = _v21, _eq9 = _$$equals(_c, 20, setCount), _v23 = _eq9 ? _c[20] : _c[20] = setCount, _v24 = _eq9 ? _c[21] : _c[21] = ()=>setCount(0), _eq10 = _$$equals(_c, 22, _v24), _v25 = _eq10 ? _c[22] : _c[22] = _v24, _eq11 = _eq8 && _eq10, _v26 = _eq11 ? _c[23] : _c[23] = /*#__PURE__*/ _jsx(\\"button\\", {
-        disabled: _v22,
-        onClick: _v25,
-        children: \\"Reset Count\\"
-    }), _eq12 = _$$equals(_c, 24, _v26), _v27 = _eq12 ? _c[24] : _c[24] = _v26, _eq13 = _eq4 && _eq6 && _eq7 && _eq12, _v28 = _eq13 ? _c[25] : _c[25] = /*#__PURE__*/ _jsxs(\\"div\\", {
-        children: [
-            _v13,
-            _v16,
-            _v20,
-            _v27
+    }
+    let _equals5 = _$$equals(_cache, 12, _condition), _value14 = _equals5 ? _cache[12] : _cache[12] = _condition, _value15 = _equals4 ? _cache[13] : _cache[13] = _value8 > 0, _equals6 = _$$equals(_cache, 14, _value15), _value16 = _equals6 ? _cache[14] : _cache[14] = _value15, _equals7 = _$$equals(_cache, 15, setCount), _value17 = _equals7 ? _cache[15] : _cache[15] = setCount, _value18 = _equals7 ? _cache[16] : _cache[16] = ()=>setCount(0), _equals8 = _$$equals(_cache, 17, _value18), _value19 = _equals8 ? _cache[17] : _cache[17] = _value18, _value20 = _equals4 && _equals5 && _equals6 && _equals8 ? _cache[18] : _cache[18] = [
+        _value8,
+        _value11,
+        _value14,
+        _value16,
+        _value19
+    ], _equals10 = _$$equals(_cache, 19, _value20), _value21 = _equals10 ? _cache[19] : _cache[19] = _value20;
+    return _equals10 ? _cache[20] : _cache[20] = /*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo, {
+        v: _value21
+    });
+}
+"
+`;
+
+exports[`forgetti-loader (webpack) should work 1`] = `
+"import { jsx as _jsx } from \\"react/jsx-runtime\\";
+import { useRef as _useRef } from \\"react\\";
+import { $$cache as _$$cache } from \\"forgetti/runtime\\";
+import { memo as _memo } from \\"react\\";
+import { $$memo as _$$memo } from \\"forgetti/runtime\\";
+const _Memo = _$$memo(_memo, (_values)=>/*#__PURE__*/ _jsx(\\"div\\", {
+        children: _values[0]
+    })), _Memo2 = _$$memo(_memo, (_values2)=>/*#__PURE__*/ _jsx(\\"p\\", {
+        children: _values2[0]
+    }));
+export default function Example() {
+    let _cache = _$$cache(_useRef, 1);
+    return 0 in _cache ? _cache[0] : _cache[0] = /*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo, {
+        v: [
+            [
+                1,
+                2,
+                3,
+                4
+            ].map((i)=>/*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo2, {
+                    v: [
+                        i
+                    ]
+                }, i))
         ]
     });
-    return _v28;
 }
 "
 `;
 
-exports[`forgetti-loader should work 1`] = `
+exports[`forgetti-loader (webpack) should work with tsx 1`] = `
 "import { jsx as _jsx } from \\"react/jsx-runtime\\";
-import { useMemo as _useMemo } from \\"react\\";
+import { useRef as _useRef } from \\"react\\";
 import { $$cache as _$$cache } from \\"forgetti/runtime\\";
-import { $$equals as _$$equals } from \\"forgetti/runtime\\";
+import { memo as _memo } from \\"react\\";
+import { $$memo as _$$memo } from \\"forgetti/runtime\\";
+const _Memo = _$$memo(_memo, (_values)=>/*#__PURE__*/ _jsx(\\"div\\", {
+        children: _values[0]
+    })), _Memo2 = _$$memo(_memo, (_values2)=>/*#__PURE__*/ _jsx(\\"p\\", {
+        children: _values2[0]
+    })), _Memo3 = _$$memo(_memo, (_values3)=>/*#__PURE__*/ _jsx(\\"div\\", {
+        children: _values3[0]
+    })), _Memo4 = _$$memo(_memo, (_values4)=>/*#__PURE__*/ _jsx(\\"p\\", {
+        children: _values4[0]
+    }));
 export default function Example() {
-    let _c = _$$cache(_useMemo, 6), _v = _c[0] ||= [
-        1,
-        2,
-        3,
-        4
-    ];
-    const value = _v;
-    let _eq = _$$equals(_c, 1, value), _v2 = _eq ? _c[1] : _c[1] = value, _v3 = _c[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
-            children: i
-        }, i), _v4 = _eq ? _c[3] : _c[3] = _v2.map(_v3), _eq2 = _$$equals(_c, 4, _v4), _v5 = _eq2 ? _c[4] : _c[4] = _v4, _v6 = _eq2 ? _c[5] : _c[5] = /*#__PURE__*/ _jsx(\\"div\\", {
-        children: _v5
+    let _cache = _$$cache(_useRef, 1);
+    return 0 in _cache ? _cache[0] : _cache[0] = /*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo, {
+        v: [
+            [
+                1,
+                2,
+                3,
+                4
+            ].map((i)=>/*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo2, {
+                    v: [
+                        i
+                    ]
+                }, i))
+        ]
     });
-    return _v6;
-}
-"
-`;
-
-exports[`forgetti-loader should work with tsx 1`] = `
-"import { jsx as _jsx } from \\"react/jsx-runtime\\";
-import { useMemo as _useMemo } from \\"react\\";
-import { $$cache as _$$cache } from \\"forgetti/runtime\\";
-import { $$equals as _$$equals } from \\"forgetti/runtime\\";
-export default function Example() {
-    let _c = _$$cache(_useMemo, 6), _v = _c[0] ||= [
-        1,
-        2,
-        3,
-        4
-    ];
-    const value = _v;
-    let _eq = _$$equals(_c, 1, value), _v2 = _eq ? _c[1] : _c[1] = value, _v3 = _c[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
-            children: i
-        }, i), _v4 = _eq ? _c[3] : _c[3] = _v2.map(_v3), _eq2 = _$$equals(_c, 4, _v4), _v5 = _eq2 ? _c[4] : _c[4] = _v4, _v6 = _eq2 ? _c[5] : _c[5] = /*#__PURE__*/ _jsx(\\"div\\", {
-        children: _v5
-    });
-    return _v6;
 }
 export const AnotherExmaple = ()=>{
-    let _c2 = _$$cache(_useMemo, 6), _v7 = _c2[0] ||= [
-        1,
-        2,
-        3,
-        4
-    ];
-    const value = _v7;
-    let _eq3 = _$$equals(_c2, 1, value), _v8 = _eq3 ? _c2[1] : _c2[1] = value, _v9 = _c2[2] ||= (i)=>/*#__PURE__*/ _jsx(\\"p\\", {
-            children: i
-        }, i), _v10 = _eq3 ? _c2[3] : _c2[3] = _v8.map(_v9), _eq4 = _$$equals(_c2, 4, _v10), _v11 = _eq4 ? _c2[4] : _c2[4] = _v10, _v12 = _eq4 ? _c2[5] : _c2[5] = /*#__PURE__*/ _jsx(\\"div\\", {
-        children: _v11
+    let _cache2 = _$$cache(_useRef, 1);
+    return 0 in _cache2 ? _cache2[0] : _cache2[0] = /*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo3, {
+        v: [
+            [
+                1,
+                2,
+                3,
+                4
+            ].map((i)=>/*@forgetti jsx*/ /*#__PURE__*/ _jsx(_Memo4, {
+                    v: [
+                        i
+                    ]
+                }, i))
+        ]
     });
-    return _v12;
 };
 "
 `;
