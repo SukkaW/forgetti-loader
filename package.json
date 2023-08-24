@@ -87,5 +87,35 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "overrides": {
+    "array-includes": "npm:@nolyfill/array-includes@latest",
+    "array.prototype.flat": "npm:@nolyfill/array.prototype.flat@latest",
+    "array.prototype.flatmap": "npm:@nolyfill/array.prototype.flatmap@latest",
+    "array.prototype.tosorted": "npm:@nolyfill/array.prototype.tosorted@latest",
+    "available-typed-arrays": "npm:@nolyfill/available-typed-arrays@latest",
+    "define-properties": "npm:@nolyfill/define-properties@latest",
+    "function-bind": "npm:@nolyfill/function-bind@latest",
+    "gopd": "npm:@nolyfill/gopd@latest",
+    "has": "npm:@nolyfill/has@latest",
+    "has-symbols": "npm:@nolyfill/has-symbols@latest",
+    "has-tostringtag": "npm:@nolyfill/has-tostringtag@latest",
+    "is-array-buffer": "npm:@nolyfill/is-array-buffer@latest",
+    "is-date-object": "npm:@nolyfill/is-date-object@latest",
+    "is-regex": "npm:@nolyfill/is-regex@latest",
+    "is-shared-array-buffer": "npm:@nolyfill/is-shared-array-buffer@latest",
+    "is-string": "npm:@nolyfill/is-string@latest",
+    "object-keys": "npm:@nolyfill/object-keys@latest",
+    "object.assign": "npm:@nolyfill/object.assign@latest",
+    "object.entries": "npm:@nolyfill/object.entries@latest",
+    "object.fromentries": "npm:@nolyfill/object.fromentries@latest",
+    "object.hasown": "npm:@nolyfill/object.hasown@latest",
+    "object.values": "npm:@nolyfill/object.values@latest",
+    "regexp.prototype.flags": "npm:@nolyfill/regexp.prototype.flags@latest",
+    "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@latest",
+    "which-boxed-primitive": "npm:@nolyfill/which-boxed-primitive@latest",
+    "which-typed-array": "npm:@nolyfill/which-typed-array@latest",
+    "es-iterator-helpers": "npm:@nolyfill/es-iterator-helpers@latest",
+    "has-proto": "npm:@nolyfill/has-proto@latest"
   }
 }
