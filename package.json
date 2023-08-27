@@ -116,6 +116,7 @@
     "which-boxed-primitive": "npm:@nolyfill/which-boxed-primitive@latest",
     "which-typed-array": "npm:@nolyfill/which-typed-array@latest",
     "es-iterator-helpers": "npm:@nolyfill/es-iterator-helpers@latest",
-    "has-proto": "npm:@nolyfill/has-proto@latest"
+    "has-proto": "npm:@nolyfill/has-proto@latest",
+    "is-arguments": "npm:@nolyfill/is-arguments@latest"
   }
 }
