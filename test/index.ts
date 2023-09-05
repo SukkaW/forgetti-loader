@@ -1,7 +1,7 @@
 import chai from 'chai';
 import { jestSnapshotPlugin } from 'mocha-chai-jest-snapshot';
 
-import { defineForgettiLoaderOptions } from '../src';
+import { defineForgettiLoaderOptions } from '../dist';
 
 import getWebpackCompiler from './utils/get-webpack-compiler';
 import getRspackCompiler from './utils/get-rspack-compiler';
