@@ -68,7 +68,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "forgetti": "^0.7.0",
+    "forgetti": "^0.7.2",
     "memfs": "^4.2.0",
     "mocha": "^10.2.0",
     "mocha-chai-jest-snapshot": "^1.1.4",
@@ -80,7 +80,7 @@
     "webpack": "^5.88.1"
   },
   "peerDependencies": {
-    "forgetti": "^0.7.0"
+    "forgetti": "^0.7.2"
   },
   "engines": {
     "node": ">=16"
