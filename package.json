@@ -2,40 +2,45 @@
   "name": "forgetti-loader",
   "version": "0.2.2",
   "description": "A webpack loader that solves your hook spaghetti. Inspired by React Forget. Powered by forgetti.",
+  "homepage": "https://github.com/SukkaW/forgetti-loader#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SukkaW/forgetti-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SukkaW/forgetti-loader/issues"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "next.js"
   ],
-  "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "types": "./dist/index.d.ts",
-      "module": "./dist/index.m.js",
       "import": "./dist/index.mjs",
+      "module": "./dist/index.m.js",
       "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
     "./next": {
       "types": "./dist/next.d.ts",
-      "module": "./dist/next.m.js",
       "import": "./dist/next.mjs",
+      "module": "./dist/next.m.js",
       "require": "./dist/next.cjs",
       "default": "./dist/next.js"
     }
   },
   "scripts": {
+    "lint": "eslint --format=sukka .",
     "build": "rollup -c rollup.config.ts --configPlugin swc3 --bundleConfigAsCjs",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build",
     "test": "mocha -r @swc-node/register 'test/index.ts'",
     "test:update": "mocha --update -r @swc-node/register 'test/index.ts'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SukkaW/forgetti-loader.git"
   },
   "keywords": [
     "webpack",
@@ -46,11 +51,13 @@
   ],
   "author": "Sukka <https://skk.moe>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SukkaW/forgetti-loader/issues"
+  "dependencies": {
+    "@babel/core": "^7.23.2"
   },
-  "homepage": "https://github.com/SukkaW/forgetti-loader#readme",
   "devDependencies": {
+    "@eslint-sukka/node": "^4.1.7",
+    "@eslint-sukka/react": "^4.1.7",
+    "@eslint-sukka/ts": "^4.1.7",
     "@rspack/core": "^0.3.10",
     "@swc-node/register": "^1.6.8",
     "@swc/core": "^1.3.96",
@@ -59,15 +66,9 @@
     "@types/mocha": "^10.0.3",
     "@types/node": "^18.18.8",
     "@types/react": "^18.2.36",
-    "@typescript-eslint/eslint-plugin": "^6.6.0",
-    "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.53.0",
-    "eslint-config-sukka": "^3.0.5",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-import": "npm:eslint-plugin-i@^2.28.0-2",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-config-sukka": "^4.1.7",
+    "eslint-formatter-sukka": "^4.1.7",
     "forgetti": "^0.7.2",
     "memfs": "^4.6.0",
     "mocha": "^10.2.0",
@@ -117,8 +118,5 @@
     "has-proto": "npm:@nolyfill/has-proto@latest",
     "is-arguments": "npm:@nolyfill/is-arguments@latest",
     "is-generator-function": "npm:@nolyfill/is-generator-function@latest"
-  },
-  "dependencies": {
-    "@babel/core": "^7.23.2"
   }
 }

@@ -34,7 +34,7 @@ export default (fixture: string, loaderOptions: ForgettiLoaderOptions = { preset
     },
     module: {
       rules: [{
-        test: /\.[mc]?[jt]sx$/i,
+        test: /\.[cm]?[jt]sx$/i,
         exclude: /node_modules/,
         use: [
           {

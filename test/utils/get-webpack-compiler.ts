@@ -57,7 +57,7 @@ export default (fixture: string, loaderOptions: ForgettiLoaderOptions = { preset
     module: {
       rules: [
         {
-          test: /\.[mc]?jsx$/i,
+          test: /\.[cm]?jsx$/i,
           exclude: /node_modules/,
           use: [
             useSwcLoader(false),
@@ -68,7 +68,7 @@ export default (fixture: string, loaderOptions: ForgettiLoaderOptions = { preset
           ]
         },
         {
-          test: /\.[mc]?tsx$/i,
+          test: /\.[cm]?tsx$/i,
           exclude: /node_modules/,
           use: [
             useSwcLoader(true),

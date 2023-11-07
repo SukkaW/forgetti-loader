@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
     "target": "es2018",
+    "jsx": "preserve",
     "module": "commonjs",
+    "resolveJsonModule": true,
     "declaration": true,
     "outDir": "./dist",
-    "strict": true,
-    "jsx": "preserve",
     "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "strict": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "test/**/*.ts", "test/**/*.tsx", "rollup.config.ts"]
 }

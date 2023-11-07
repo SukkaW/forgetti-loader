@@ -29,7 +29,7 @@ export default async function forgettiLoader(this: webpack.LoaderContext<Forgett
       ],
       // override babel parserOpts
       parserOpts: {
-        ...(options.babel?.parserOpts || {}),
+        ...options.babel?.parserOpts,
         // override babel parserOpts plugins and add jsx
         plugins: [
           ...(options.babel?.parserOpts?.plugins || []),
