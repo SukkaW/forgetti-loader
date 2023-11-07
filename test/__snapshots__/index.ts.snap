@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`forgetti-loader (rspack) should accept loader option 1`] = `
-"import { useRef as _useRef } from \\"preact/hooks\\";
+"import { jsx as _jsx, jsxs as _jsxs } from \\"react/jsx-runtime\\";
+import { useRef as _useRef } from \\"preact/hooks\\";
 import { $$ref as _$$ref } from \\"forgetti/runtime\\";
 import { useMemo as _useMemo } from \\"preact/hooks\\";
 import { $$cache as _$$cache } from \\"forgetti/runtime\\";
@@ -9,67 +10,71 @@ import { $$branch as _$$branch } from \\"forgetti/runtime\\";
 import { $$equals as _$$equals } from \\"forgetti/runtime\\";
 import { memo as _memo } from \\"preact/compat\\";
 import { $$memo as _$$memo } from \\"forgetti/runtime\\";
-const _Memo = _$$memo(_memo, _values => <div>
-      <p>Count: {_values[0]}</p>
-      <button onClick={_values[1]}>Increment</button>
-
-      {_values[2]}
-      <button disabled={_values[3]} onClick={_values[4]}>Reset Count</button>
-    </div>),
-  _Memo2 = _$$memo(_memo, _values2 => <p>Count is higher than 10</p>);
-/* eslint-disable @typescript-eslint/ban-ts-comment -- fixture */
-/* eslint-disable import/no-unresolved -- fixture */
-// @ts-nocheck
-import { useState, useRef, useCallback } from 'preact/hooks';
+const _Memo = _$$memo(_memo, (_values)=>_jsxs(\\"div\\", {
+        children: [
+            _jsxs(\\"p\\", {
+                children: [
+                    \\"Count: \\",
+                    _values[0]
+                ]
+            }),
+            _jsx(\\"button\\", {
+                onClick: _values[1],
+                children: \\"Increment\\"
+            }),
+            _values[2],
+            _jsx(\\"button\\", {
+                disabled: _values[3],
+                onClick: _values[4],
+                children: \\"Reset Count\\"
+            })
+        ]
+    })), _Memo2 = _$$memo(_memo, (_values2)=>_jsx(\\"p\\", {
+        children: \\"Count is higher than 10\\"
+    }));
+/* eslint-disable @typescript-eslint/ban-ts-comment -- fixture */ /* eslint-disable import/no-unresolved -- fixture */ // @ts-nocheck
+import { useState } from 'preact/hooks';
 import { memo } from 'preact/compat';
 function Sukka() {
-  let _cache = _$$cache(_useMemo, 20),
-    _ref = _$$ref(_useRef, 1);
-  const [count, setCount] = useState(0);
-  const singletonRef = 0 in _ref ? _ref[0] : _ref[0] = {
-    current: null
-  };
-  let _equals = _$$equals(_cache, 0, singletonRef),
-    _value2 = _equals ? _cache[0] : _cache[0] = singletonRef,
-    _value3 = _equals ? _cache[1] : _cache[1] = _value2.current,
-    _equals2 = _$$equals(_cache, 2, _value3),
-    _value4 = _equals2 ? _cache[2] : _cache[2] = _value3;
-  if (_equals2 ? _cache[3] : _cache[3] = !_value4) {
-    let _cache2 = _$$branch(_cache, 4, 2);
-    (_$$equals(_cache2, 0, singletonRef) ? _cache2[0] : _cache2[0] = singletonRef).current = 1 in _cache2 ? _cache2[1] : _cache2[1] = new AbortController();
-  }
-  let _equals4 = _$$equals(_cache, 5, count),
-    _value8 = _equals4 ? _cache[5] : _cache[5] = count;
-  if (_equals4 ? _cache[6] : _cache[6] = _value8 > 10) {
-    return null;
-  }
-  let _value10 = 7 in _cache ? _cache[7] : _cache[7] = [],
-    _value11 = 8 in _cache ? _cache[8] : _cache[8] = () => setCount(count => count + 1),
-    _condition = _equals4 ? _cache[9] : _cache[9] = _value8 > 10;
-  if (_condition) {
-    let _cache3 = _$$branch(_cache, 10, 1);
-    _condition = 0 in _cache3 ? _cache3[0] : _cache3[0] = /*@forgetti jsx*/<_Memo2 v={[]} />;
-  }
-  let _equals5 = _$$equals(_cache, 11, _condition),
-    _value14 = _equals5 ? _cache[11] : _cache[11] = _condition,
-    _value15 = _equals4 ? _cache[12] : _cache[12] = _value8 > 0,
-    _equals6 = _$$equals(_cache, 13, _value15),
-    _value16 = _equals6 ? _cache[13] : _cache[13] = _value15,
-    _equals7 = _$$equals(_cache, 14, setCount),
-    _value17 = _equals7 ? _cache[14] : _cache[14] = setCount,
-    _value18 = _equals7 ? _cache[15] : _cache[15] = () => setCount(0),
-    _equals8 = _$$equals(_cache, 16, _value18),
-    _value19 = _equals8 ? _cache[16] : _cache[16] = _value18,
-    _value20 = _equals4 && _equals5 && _equals6 && _equals8 ? _cache[17] : _cache[17] = [_value8, _value11, _value14, _value16, _value19],
-    _equals10 = _$$equals(_cache, 18, _value20),
-    _value21 = _equals10 ? _cache[18] : _cache[18] = _value20;
-  return _equals10 ? _cache[19] : _cache[19] = /*@forgetti jsx*/<_Memo v={_value21} />;
+    let _cache = _$$cache(_useMemo, 20), _ref = _$$ref(_useRef, 1);
+    const [count, setCount] = useState(0);
+    const singletonRef = 0 in _ref ? _ref[0] : _ref[0] = {
+        current: null
+    };
+    let _equals = _$$equals(_cache, 0, singletonRef), _value2 = _equals ? _cache[0] : _cache[0] = singletonRef, _value3 = _equals ? _cache[1] : _cache[1] = _value2.current, _equals2 = _$$equals(_cache, 2, _value3), _value4 = _equals2 ? _cache[2] : _cache[2] = _value3;
+    if (_equals2 ? _cache[3] : _cache[3] = !_value4) {
+        let _cache2 = _$$branch(_cache, 4, 2);
+        (_$$equals(_cache2, 0, singletonRef) ? _cache2[0] : _cache2[0] = singletonRef).current = 1 in _cache2 ? _cache2[1] : _cache2[1] = new AbortController();
+    }
+    let _equals4 = _$$equals(_cache, 5, count), _value8 = _equals4 ? _cache[5] : _cache[5] = count;
+    if (_equals4 ? _cache[6] : _cache[6] = _value8 > 10) {
+        return null;
+    }
+    let _value10 = 7 in _cache ? _cache[7] : _cache[7] = [], _value11 = 8 in _cache ? _cache[8] : _cache[8] = ()=>setCount((count)=>count + 1), _condition = _equals4 ? _cache[9] : _cache[9] = _value8 > 10;
+    if (_condition) {
+        let _cache3 = _$$branch(_cache, 10, 1);
+        _condition = 0 in _cache3 ? _cache3[0] : _cache3[0] = /*@forgetti jsx*/ _jsx(_Memo2, {
+            v: []
+        });
+    }
+    let _equals5 = _$$equals(_cache, 11, _condition), _value14 = _equals5 ? _cache[11] : _cache[11] = _condition, _value15 = _equals4 ? _cache[12] : _cache[12] = _value8 > 0, _equals6 = _$$equals(_cache, 13, _value15), _value16 = _equals6 ? _cache[13] : _cache[13] = _value15, _equals7 = _$$equals(_cache, 14, setCount), _value17 = _equals7 ? _cache[14] : _cache[14] = setCount, _value18 = _equals7 ? _cache[15] : _cache[15] = ()=>setCount(0), _equals8 = _$$equals(_cache, 16, _value18), _value19 = _equals8 ? _cache[16] : _cache[16] = _value18, _value20 = _equals4 && _equals5 && _equals6 && _equals8 ? _cache[17] : _cache[17] = [
+        _value8,
+        _value11,
+        _value14,
+        _value16,
+        _value19
+    ], _equals10 = _$$equals(_cache, 18, _value20), _value21 = _equals10 ? _cache[18] : _cache[18] = _value20;
+    return _equals10 ? _cache[19] : _cache[19] = /*@forgetti jsx*/ _jsx(_Memo, {
+        v: _value21
+    });
 }
-export default memo(Sukka);"
+export default memo(Sukka);
+"
 `;
 
 exports[`forgetti-loader (rspack) should optimize complex component 1`] = `
-"import { useRef as _useRef } from \\"react\\";
+"import { jsx as _jsx, jsxs as _jsxs } from \\"react/jsx-runtime\\";
+import { useRef as _useRef } from \\"react\\";
 import { $$ref as _$$ref } from \\"forgetti/runtime\\";
 import { useMemo as _useMemo } from \\"react\\";
 import { $$cache as _$$cache } from \\"forgetti/runtime\\";
@@ -77,96 +82,146 @@ import { $$branch as _$$branch } from \\"forgetti/runtime\\";
 import { $$equals as _$$equals } from \\"forgetti/runtime\\";
 import { memo as _memo } from \\"react\\";
 import { $$memo as _$$memo } from \\"forgetti/runtime\\";
-const _Memo = _$$memo(_memo, _values => <div>
-      <p>Count: {_values[0]}</p>
-      <button onClick={_values[1]}>Increment</button>
-
-      {_values[2]}
-      <button disabled={_values[3]} onClick={_values[4]}>Reset Count</button>
-    </div>),
-  _Memo2 = _$$memo(_memo, _values2 => <p>Count is higher than 10</p>);
-import { useState, useRef, useCallback } from 'react';
+const _Memo = _$$memo(_memo, (_values)=>_jsxs(\\"div\\", {
+        children: [
+            _jsxs(\\"p\\", {
+                children: [
+                    \\"Count: \\",
+                    _values[0]
+                ]
+            }),
+            _jsx(\\"button\\", {
+                onClick: _values[1],
+                children: \\"Increment\\"
+            }),
+            _values[2],
+            _jsx(\\"button\\", {
+                disabled: _values[3],
+                onClick: _values[4],
+                children: \\"Reset Count\\"
+            })
+        ]
+    })), _Memo2 = _$$memo(_memo, (_values2)=>_jsx(\\"p\\", {
+        children: \\"Count is higher than 10\\"
+    }));
+import { useState } from 'react';
 export default function Sukka() {
-  let _cache = _$$cache(_useMemo, 20),
-    _ref = _$$ref(_useRef, 1);
-  const [count, setCount] = useState(0);
-  const singletonRef = 0 in _ref ? _ref[0] : _ref[0] = {
-    current: null
-  };
-  let _equals = _$$equals(_cache, 0, singletonRef),
-    _value2 = _equals ? _cache[0] : _cache[0] = singletonRef,
-    _value3 = _equals ? _cache[1] : _cache[1] = _value2.current,
-    _equals2 = _$$equals(_cache, 2, _value3),
-    _value4 = _equals2 ? _cache[2] : _cache[2] = _value3;
-  if (_equals2 ? _cache[3] : _cache[3] = !_value4) {
-    let _cache2 = _$$branch(_cache, 4, 2);
-    (_$$equals(_cache2, 0, singletonRef) ? _cache2[0] : _cache2[0] = singletonRef).current = 1 in _cache2 ? _cache2[1] : _cache2[1] = new AbortController();
-  }
-  let _equals4 = _$$equals(_cache, 5, count),
-    _value8 = _equals4 ? _cache[5] : _cache[5] = count;
-  if (_equals4 ? _cache[6] : _cache[6] = _value8 > 10) {
-    return null;
-  }
-  let _value10 = 7 in _cache ? _cache[7] : _cache[7] = [],
-    _value11 = 8 in _cache ? _cache[8] : _cache[8] = () => setCount(count => count + 1),
-    _condition = _equals4 ? _cache[9] : _cache[9] = _value8 > 10;
-  if (_condition) {
-    let _cache3 = _$$branch(_cache, 10, 1);
-    _condition = 0 in _cache3 ? _cache3[0] : _cache3[0] = /*@forgetti jsx*/<_Memo2 v={[]} />;
-  }
-  let _equals5 = _$$equals(_cache, 11, _condition),
-    _value14 = _equals5 ? _cache[11] : _cache[11] = _condition,
-    _value15 = _equals4 ? _cache[12] : _cache[12] = _value8 > 0,
-    _equals6 = _$$equals(_cache, 13, _value15),
-    _value16 = _equals6 ? _cache[13] : _cache[13] = _value15,
-    _equals7 = _$$equals(_cache, 14, setCount),
-    _value17 = _equals7 ? _cache[14] : _cache[14] = setCount,
-    _value18 = _equals7 ? _cache[15] : _cache[15] = () => setCount(0),
-    _equals8 = _$$equals(_cache, 16, _value18),
-    _value19 = _equals8 ? _cache[16] : _cache[16] = _value18,
-    _value20 = _equals4 && _equals5 && _equals6 && _equals8 ? _cache[17] : _cache[17] = [_value8, _value11, _value14, _value16, _value19],
-    _equals10 = _$$equals(_cache, 18, _value20),
-    _value21 = _equals10 ? _cache[18] : _cache[18] = _value20;
-  return _equals10 ? _cache[19] : _cache[19] = /*@forgetti jsx*/<_Memo v={_value21} />;
-}"
+    let _cache = _$$cache(_useMemo, 20), _ref = _$$ref(_useRef, 1);
+    const [count, setCount] = useState(0);
+    const singletonRef = 0 in _ref ? _ref[0] : _ref[0] = {
+        current: null
+    };
+    let _equals = _$$equals(_cache, 0, singletonRef), _value2 = _equals ? _cache[0] : _cache[0] = singletonRef, _value3 = _equals ? _cache[1] : _cache[1] = _value2.current, _equals2 = _$$equals(_cache, 2, _value3), _value4 = _equals2 ? _cache[2] : _cache[2] = _value3;
+    if (_equals2 ? _cache[3] : _cache[3] = !_value4) {
+        let _cache2 = _$$branch(_cache, 4, 2);
+        (_$$equals(_cache2, 0, singletonRef) ? _cache2[0] : _cache2[0] = singletonRef).current = 1 in _cache2 ? _cache2[1] : _cache2[1] = new AbortController();
+    }
+    let _equals4 = _$$equals(_cache, 5, count), _value8 = _equals4 ? _cache[5] : _cache[5] = count;
+    if (_equals4 ? _cache[6] : _cache[6] = _value8 > 10) {
+        return null;
+    }
+    let _value10 = 7 in _cache ? _cache[7] : _cache[7] = [], _value11 = 8 in _cache ? _cache[8] : _cache[8] = ()=>setCount((count)=>count + 1), _condition = _equals4 ? _cache[9] : _cache[9] = _value8 > 10;
+    if (_condition) {
+        let _cache3 = _$$branch(_cache, 10, 1);
+        _condition = 0 in _cache3 ? _cache3[0] : _cache3[0] = /*@forgetti jsx*/ _jsx(_Memo2, {
+            v: []
+        });
+    }
+    let _equals5 = _$$equals(_cache, 11, _condition), _value14 = _equals5 ? _cache[11] : _cache[11] = _condition, _value15 = _equals4 ? _cache[12] : _cache[12] = _value8 > 0, _equals6 = _$$equals(_cache, 13, _value15), _value16 = _equals6 ? _cache[13] : _cache[13] = _value15, _equals7 = _$$equals(_cache, 14, setCount), _value17 = _equals7 ? _cache[14] : _cache[14] = setCount, _value18 = _equals7 ? _cache[15] : _cache[15] = ()=>setCount(0), _equals8 = _$$equals(_cache, 16, _value18), _value19 = _equals8 ? _cache[16] : _cache[16] = _value18, _value20 = _equals4 && _equals5 && _equals6 && _equals8 ? _cache[17] : _cache[17] = [
+        _value8,
+        _value11,
+        _value14,
+        _value16,
+        _value19
+    ], _equals10 = _$$equals(_cache, 18, _value20), _value21 = _equals10 ? _cache[18] : _cache[18] = _value20;
+    return _equals10 ? _cache[19] : _cache[19] = /*@forgetti jsx*/ _jsx(_Memo, {
+        v: _value21
+    });
+}
+"
 `;
 
 exports[`forgetti-loader (rspack) should work 1`] = `
-"import { useMemo as _useMemo } from \\"react\\";
+"import { jsx as _jsx } from \\"react/jsx-runtime\\";
+import { useMemo as _useMemo } from \\"react\\";
 import { $$cache as _$$cache } from \\"forgetti/runtime\\";
 import { memo as _memo } from \\"react\\";
 import { $$memo as _$$memo } from \\"forgetti/runtime\\";
-const _Memo = _$$memo(_memo, _values => <div>
-      {_values[0]}
-    </div>),
-  _Memo2 = _$$memo(_memo, _values2 => <p>{_values2[0]}</p>);
+const _Memo = _$$memo(_memo, (_values)=>_jsx(\\"div\\", {
+        children: _values[0]
+    })), _Memo2 = _$$memo(_memo, (_values2)=>_jsx(\\"p\\", {
+        children: _values2[0]
+    }));
 export default function Example() {
-  let _cache = _$$cache(_useMemo, 1);
-  return 0 in _cache ? _cache[0] : _cache[0] = /*@forgetti jsx*/<_Memo v={[[1, 2, 3, 4].map(i => /*@forgetti jsx*/<_Memo2 key={i} v={[i]} />)]} />;
-}"
+    let _cache = _$$cache(_useMemo, 1);
+    return 0 in _cache ? _cache[0] : _cache[0] = /*@forgetti jsx*/ _jsx(_Memo, {
+        v: [
+            [
+                1,
+                2,
+                3,
+                4
+            ].map((i)=>/*@forgetti jsx*/ _jsx(_Memo2, {
+                    v: [
+                        i
+                    ]
+                }, i))
+        ]
+    });
+}
+"
 `;
 
 exports[`forgetti-loader (rspack) should work with tsx 1`] = `
-"import { useMemo as _useMemo } from \\"react\\";
+"import { jsx as _jsx } from \\"react/jsx-runtime\\";
+import { useMemo as _useMemo } from \\"react\\";
 import { $$cache as _$$cache } from \\"forgetti/runtime\\";
 import { memo as _memo } from \\"react\\";
 import { $$memo as _$$memo } from \\"forgetti/runtime\\";
-const _Memo = _$$memo(_memo, _values => <div>
-      {_values[0]}
-    </div>),
-  _Memo2 = _$$memo(_memo, _values2 => <p>{_values2[0]}</p>),
-  _Memo3 = _$$memo(_memo, _values3 => <div>
-      {_values3[0]}
-    </div>),
-  _Memo4 = _$$memo(_memo, _values4 => <p>{_values4[0]}</p>);
+const _Memo = _$$memo(_memo, (_values)=>_jsx(\\"div\\", {
+        children: _values[0]
+    })), _Memo2 = _$$memo(_memo, (_values2)=>_jsx(\\"p\\", {
+        children: _values2[0]
+    })), _Memo3 = _$$memo(_memo, (_values3)=>_jsx(\\"div\\", {
+        children: _values3[0]
+    })), _Memo4 = _$$memo(_memo, (_values4)=>_jsx(\\"p\\", {
+        children: _values4[0]
+    }));
 export default function Example() {
-  let _cache = _$$cache(_useMemo, 1);
-  return 0 in _cache ? _cache[0] : _cache[0] = /*@forgetti jsx*/<_Memo v={[([1, 2, 3, 4] as const).map(i => /*@forgetti jsx*/<_Memo2 key={i} v={[i]} />)]} />;
+    let _cache = _$$cache(_useMemo, 1);
+    return 0 in _cache ? _cache[0] : _cache[0] = /*@forgetti jsx*/ _jsx(_Memo, {
+        v: [
+            [
+                1,
+                2,
+                3,
+                4
+            ].map((i)=>/*@forgetti jsx*/ _jsx(_Memo2, {
+                    v: [
+                        i
+                    ]
+                }, i))
+        ]
+    });
 }
-export const AnotherExmaple = () => {
-  let _cache2 = _$$cache(_useMemo, 1);
-  return 0 in _cache2 ? _cache2[0] : _cache2[0] = /*@forgetti jsx*/<_Memo3 v={[([1, 2, 3, 4] as const).map(i => /*@forgetti jsx*/<_Memo4 key={i} v={[i]} />)]} />;
-};"
+export const AnotherExmaple = ()=>{
+    let _cache2 = _$$cache(_useMemo, 1);
+    return 0 in _cache2 ? _cache2[0] : _cache2[0] = /*@forgetti jsx*/ _jsx(_Memo3, {
+        v: [
+            [
+                1,
+                2,
+                3,
+                4
+            ].map((i)=>/*@forgetti jsx*/ _jsx(_Memo4, {
+                    v: [
+                        i
+                    ]
+                }, i))
+        ]
+    });
+};
+"
 `;
 
 exports[`forgetti-loader (webpack) should accept loader option 1`] = `
